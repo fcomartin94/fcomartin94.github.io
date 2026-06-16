@@ -337,6 +337,10 @@ body::before {
   background: var(--glass-hi);
 }
 
+.project-card + .project-card {
+  margin-top: 24px;
+}
+
 .project-card-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -363,6 +367,14 @@ body::before {
   width: 200px; height: 200px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(58,123,213,0.18), transparent 70%);
+}
+
+/* Brew & Co. preview accent */
+.project-preview.coffee-preview {
+  background: linear-gradient(135deg, #0f1a0a 0%, #1a2810 100%);
+}
+.project-preview.coffee-preview::before {
+  background: radial-gradient(circle, rgba(139,90,40,0.22), transparent 70%);
 }
 
 .preview-mockup {
@@ -417,10 +429,16 @@ body::before {
   align-items: center;
   padding: 0 10px;
 }
+.mockup-hero-bar.coffee-bar {
+  background: linear-gradient(90deg, rgba(139,90,40,0.4), rgba(139,90,40,0.1));
+}
 .mockup-hero-bar span {
   font-size: 7px;
   font-family: var(--mono);
   color: rgba(200,220,255,0.5);
+}
+.mockup-hero-bar.coffee-bar span {
+  color: rgba(255,220,160,0.5);
 }
 .mockup-grid {
   display: grid;
@@ -435,6 +453,15 @@ body::before {
 }
 .mockup-book:nth-child(2) { background: rgba(58,123,213,0.10); }
 .mockup-book:nth-child(3) { background: rgba(58,123,213,0.20); }
+
+.mockup-coffee-item {
+  aspect-ratio: 1/1;
+  border-radius: 3px;
+  background: rgba(139,90,40,0.20);
+  border: 1px solid rgba(139,90,40,0.25);
+}
+.mockup-coffee-item:nth-child(2) { background: rgba(139,90,40,0.13); }
+.mockup-coffee-item:nth-child(3) { background: rgba(139,90,40,0.28); }
 
 .preview-stack {
   display: flex;
@@ -453,6 +480,11 @@ body::before {
   border: 1px solid rgba(58,123,213,0.25);
   padding: 3px 10px;
   border-radius: 999px;
+}
+.stack-tag.coffee-tag {
+  color: rgba(210,160,80,0.9);
+  background: rgba(139,90,40,0.15);
+  border-color: rgba(139,90,40,0.30);
 }
 
 .project-info {
@@ -755,8 +787,9 @@ body::before {
       <hr class="section-divider">
       <p class="section-label">Ecommerce & CMS</p>
       <h2 class="section-title">Proyectos de tienda online</h2>
-      <p class="section-sub">Implementaciones completas sobre WordPress y WooCommerce: catálogo, carrito, checkout y gestión de pedidos.</p>
+      <p class="section-sub">Implementaciones completas sobre WordPress/WooCommerce y PrestaShop: catálogo, carrito, checkout y gestión de pedidos.</p>
 
+      <!-- MYTHIC BOOKS -->
       <div class="project-card">
         <div class="project-card-inner">
 
@@ -815,6 +848,67 @@ body::before {
 
         </div>
       </div>
+
+      <!-- BREW & CO. -->
+      <div class="project-card">
+        <div class="project-card-inner">
+
+          <div class="project-preview coffee-preview">
+            <div class="preview-mockup">
+              <div class="mockup-bar">
+                <div class="mockup-dot mockup-dot-r"></div>
+                <div class="mockup-dot mockup-dot-y"></div>
+                <div class="mockup-dot mockup-dot-g"></div>
+                <div class="mockup-url"><span>brewandco.demo</span></div>
+              </div>
+              <div class="mockup-body">
+                <div class="mockup-hero-bar coffee-bar"><span>Specialty coffee, sourced with passion</span></div>
+                <div class="mockup-grid">
+                  <div class="mockup-coffee-item"></div>
+                  <div class="mockup-coffee-item"></div>
+                  <div class="mockup-coffee-item"></div>
+                </div>
+              </div>
+            </div>
+            <div class="preview-stack">
+              <span class="stack-tag coffee-tag">PrestaShop</span>
+              <span class="stack-tag coffee-tag">PHP</span>
+              <span class="stack-tag coffee-tag">MySQL</span>
+              <span class="stack-tag coffee-tag">XAMPP</span>
+            </div>
+          </div>
+
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-type">Tienda online · PrestaShop</span>
+              <h3 class="project-name">Brew & Co.</h3>
+              <p class="project-desc">Tienda de cafés de especialidad construida sobre PrestaShop 8. Catálogo de cafés de origen único, mezclas y equipamiento. Configuración completa del entorno local con resolución de conflictos entre versiones de PHP y MySQL.</p>
+            </div>
+
+            <div class="project-features">
+              <div class="feature-row">10 productos en 3 categorías: Single Origin, Blends, Equipment</div>
+              <div class="feature-row">Página de inicio con carrusel y productos destacados</div>
+              <div class="feature-row">Transportista configurado con tarifa plana (4,99€)</div>
+              <div class="feature-row">Envío gratis automático a partir de 30€</div>
+              <div class="feature-row">Migración de base de datos entre versiones de MySQL</div>
+              <div class="feature-row">Script de arranque para entorno de desarrollo local</div>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://youtu.be/_N138kK4SGU" target="_blank" rel="noopener" class="btn-demo">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Ver demo
+              </a>
+              <a href="https://github.com/fcomartin94/brew-co-prestashop" target="_blank" rel="noopener" class="btn-demo-ghost">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </section>
 
     <!-- DEV SECTION -->
