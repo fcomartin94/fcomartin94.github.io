@@ -96,6 +96,15 @@ body::before {
   text-decoration: none;
 }
 .nav-links { display: flex; align-items: center; gap: 24px; }
+.nav-contact { display: flex; align-items: center; gap: 14px; }
+.nav-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-lo);
+  transition: color .2s;
+}
+.nav-icon:hover { color: var(--coral-hi); }
 .nav-link {
   text-decoration: none;
   font-family: var(--mono);
@@ -139,6 +148,27 @@ body::before {
 .hero-tagline { font-size: 15px; color: var(--text); line-height: 1.7; max-width: 420px; text-align: justify; }
 .hero-tagline strong { color: var(--text-hi); font-weight: 600; }
 .hero-tagline strong.coral { color: var(--coral); }
+.hero-availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  width: fit-content;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--coral-hi);
+  background: var(--coral-lo);
+  border: 1px solid rgba(58,123,213,0.30);
+  padding: 7px 16px;
+  border-radius: 40px;
+}
+.avail-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 8px rgba(74,222,128,0.7);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
 .hero-right { display: flex; flex-direction: column; gap: 16px; align-items: stretch; }
 .hero-photo-wrap {
   width: 100%;
@@ -386,6 +416,21 @@ body::before {
 }
 .wip-text { font-size: 14px; color: var(--text); line-height: 1.7; }
 .wip-text strong { color: var(--text-hi); font-weight: 600; }
+.section-contact { margin-bottom: 40px; }
+.contact-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-b);
+  border-radius: var(--r-lg);
+  padding: 48px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.contact-title { font-size: 32px; font-weight: 800; color: var(--text-hi); letter-spacing: -0.03em; }
+.contact-sub { font-size: 15.5px; color: var(--text); max-width: 480px; line-height: 1.7; }
+.contact-actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 12px; }
 .footer {
   display: flex;
   justify-content: space-between;
@@ -533,13 +578,22 @@ body::before {
 <div class="orb orb-1"></div>
 <div class="orb orb-2"></div>
 <div class="orb orb-3"></div>
-<div class="page">
+<div class="page" id="top">
   <nav class="nav">
-    <a href="#" class="nav-logo">FM.dev</a>
+    <a href="#top" class="nav-logo">FM.dev</a>
     <div class="nav-links">
       <a href="#about" class="nav-link">About</a>
       <a href="#ecommerce" class="nav-link">Ecommerce</a>
       <a href="#dev" class="nav-link">Development</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <div class="nav-contact">
+      <a href="https://github.com/fcomartin94" target="_blank" rel="noopener" class="nav-icon" aria-label="GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+      </a>
+      <a href="mailto:martinherzog.fa@gmail.com" class="nav-icon" aria-label="Email">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
     </div>
   </nav>
   <div class="shell">
@@ -553,6 +607,10 @@ body::before {
         <p class="hero-tagline">
           <strong class="coral">Backend developer</strong> building REST APIs and microservices with Java, Spring Boot and PHP — with hands-on ecommerce experience on WordPress, WooCommerce and PrestaShop.
         </p>
+        <div class="hero-availability">
+          <span class="avail-dot"></span>
+          Open to remote work &amp; relocation
+        </div>
       </div>
       <div class="hero-right">
         <div class="hero-photo-wrap">
@@ -851,6 +909,29 @@ body::before {
               </a>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-contact">
+      <hr class="section-divider">
+      <div class="contact-card reveal">
+        <p class="section-label">Get in touch</p>
+        <h2 class="contact-title">Let's talk</h2>
+        <p class="contact-sub">Open to backend and web development roles — remote or relocation, in Spanish or English. Feel free to reach out.</p>
+        <div class="contact-actions">
+          <a href="mailto:martinherzog.fa@gmail.com" class="btn-demo">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            martinherzog.fa@gmail.com
+          </a>
+          <a href="https://github.com/fcomartin94" target="_blank" rel="noopener" class="btn-demo-ghost">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+            GitHub
+          </a>
+          <a href="CV_FcoAMartinHersog_EN.pdf" download class="btn-demo-ghost">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download CV
+          </a>
         </div>
       </div>
     </section>
