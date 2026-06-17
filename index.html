@@ -16,7 +16,7 @@
   --coral-hi:   #6aa0e8;
   --coral-lo:   rgba(58,123,213,0.13);
   --text-hi:    #deeaff;
-  --text:       rgba(200,220,255,0.60);
+  --text:       rgba(205,222,255,0.74);
   --text-lo:    rgba(160,195,240,0.32);
   --display:    'Outfit', sans-serif;
   --mono:       'Space Mono', monospace;
@@ -138,6 +138,7 @@ body::before {
 .hero-heading .coral { color: var(--coral); }
 .hero-tagline { font-size: 15px; color: var(--text); line-height: 1.7; max-width: 420px; text-align: justify; }
 .hero-tagline strong { color: var(--text-hi); font-weight: 600; }
+.hero-tagline strong.coral { color: var(--coral); }
 .hero-right { display: flex; flex-direction: column; gap: 16px; align-items: stretch; }
 .hero-photo-wrap {
   width: 100%;
@@ -406,7 +407,7 @@ body::before {
 .reveal {
   opacity: 0;
   transform: translateY(28px);
-  transition: opacity 0.10s cubic-bezier(0.22,1,0.36,1), transform 0.10s cubic-bezier(0.22,1,0.36,1);
+  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1);
 }
 .reveal.visible {
   opacity: 1;
@@ -550,7 +551,7 @@ body::before {
           <span class="coral">MARTÍN<br>HERZOG</span>
         </h1>
         <p class="hero-tagline">
-          <strong>Backend developer</strong> with a focus on ecommerce and web development. Currently building hands-on experience with WordPress, WooCommerce and CMS platforms.
+          <strong class="coral">Backend developer</strong> building REST APIs and microservices with Java, Spring Boot and PHP — with hands-on ecommerce experience on WordPress, WooCommerce and PrestaShop.
         </p>
       </div>
       <div class="hero-right">
