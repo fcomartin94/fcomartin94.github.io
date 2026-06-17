@@ -467,16 +467,29 @@ body::before {
 ::-webkit-scrollbar-thumb { background: rgba(58,123,213,.28); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(58,123,213,.50); }
 @media (max-width: 768px) {
-  .nav { padding: 16px 24px; }
+  .nav { padding: 16px 20px; }
   .nav-links { display: none; }
-  .shell { padding: 0 24px 60px; }
-  .hero-card { grid-template-columns: 1fr; gap: 40px; padding: 48px 0 60px; }
+  .nav-contact { gap: 10px; }
+  .shell { padding: 0 20px 60px; }
+  .hero-card { grid-template-columns: 1fr; gap: 32px; padding: 40px 0 56px; }
   .hero-right { order: -1; }
-  .hero-photo-wrap { aspect-ratio: 1/1; max-width: 220px; margin: 0 auto; }
+  .hero-photo-wrap { aspect-ratio: 3/4; max-width: 75vw; width: 75vw; margin: 0 auto; }
+  .hero-heading { font-size: clamp(36px, 11vw, 64px); }
+  .hero-tagline { text-align: left; }
+  .section-sub { text-align: left; }
+  .about-bio p { text-align: left; }
+  .tech-grid { grid-template-columns: 1fr 1fr; }
+  .tech-category-languages { grid-column: span 2; }
+  .cat-db, .cat-cms { grid-column: span 1; }
+  .cat-fw, .cat-tools { grid-column: span 2; }
   .project-card-inner { grid-template-columns: 1fr; }
   .project-preview { border-right: none; border-bottom: 1px solid var(--glass-b); }
   .wip-card { flex-direction: column; gap: 20px; padding: 28px; }
   .footer { padding: 24px; flex-direction: column; gap: 12px; text-align: center; }
+  .contact-card { padding: 36px 24px; }
+  .contact-actions { flex-direction: column; align-items: stretch; }
+  .contact-actions .btn-demo,
+  .contact-actions .btn-demo-ghost { justify-content: center; }
 }
 
 /* ── About section ── */
