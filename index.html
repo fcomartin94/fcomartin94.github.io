@@ -478,10 +478,12 @@ body::before {
   .hero-tagline { text-align: left; }
   .section-sub { text-align: left; }
   .about-bio p { text-align: left; }
-  .tech-grid { grid-template-columns: 1fr; }
-  .tech-category-languages,
-  .cat-db, .cat-cms, .cat-fw, .cat-tools { grid-column: span 1; }
-  .tech-tags-2col { grid-template-columns: 1fr; }
+  .tech-grid { grid-template-columns: 1fr 1fr; }
+  .tech-category-languages { grid-column: span 2; }
+  .cat-db, .cat-cms { grid-column: span 1; }
+  .cat-fw, .cat-tools { grid-column: span 2; }
+  .tech-tags-2col { grid-template-columns: 1fr 1fr; gap: 5px; }
+  .tech-tags-2col .stack-tag { font-size: 11px; padding: 4px 8px; letter-spacing: 0.04em; }
   .project-card-inner { grid-template-columns: 1fr; }
   .project-preview { border-right: none; border-bottom: 1px solid var(--glass-b); }
   .wip-card { flex-direction: column; gap: 20px; padding: 28px; }
