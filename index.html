@@ -287,7 +287,7 @@ body::before {
   text-transform: uppercase;
 }
 .project-name { font-size: 22px; font-weight: 700; color: var(--text-hi); letter-spacing: -0.02em; line-height: 1.2; }
-.project-desc { font-size: 15.5px; color: var(--text); line-height: 1.7; }
+.project-desc { font-size: 15.5px; color: var(--text); line-height: 1.7; text-align: justify; }
 .project-features { display: flex; flex-direction: column; gap: 8px; }
 .feature-row {
   display: flex;
@@ -813,12 +813,8 @@ body::before {
       <div class="project-card reveal" style="transition-delay:0.15s;">
         <div class="project-card-inner">
           <div class="project-preview" style="background:#080d18;">
-            <div class="project-screenshot" style="background:#0d1526;padding:20px;font-family:monospace;font-size:11px;color:#4a9eff;line-height:1.7;max-width:280px;">
-              <div style="color:#6b7fa8;margin-bottom:6px;">Client → :8080 API Gateway</div>
-              <div style="color:#a8c5ff;">├── lb://user-service    :8081</div>
-              <div style="color:#a8c5ff;">├── lb://product-service :8082</div>
-              <div style="color:#a8c5ff;">└── lb://order-service   :8083</div>
-              <div style="color:#6b7fa8;margin-top:6px;">Eureka :8761 ← all services</div>
+            <div class="project-screenshot">
+              <img src="ecommerce-microservices.png" alt="ecommerce-microservices screenshot" style="width:100%;height:100%;object-fit:cover;display:block;">
             </div>
             <div class="preview-stack">
               <span class="stack-tag">Java</span>
@@ -832,7 +828,7 @@ body::before {
           <div class="project-info">
             <div class="project-meta">
               <span class="project-type">Microservices · Spring Cloud</span>
-              <h3 class="project-name">Mini E-Commerce Microservices</h3>
+              <h3 class="project-name">ecommerce-microservices</h3>
               <p class="project-desc">Full microservices backend with Spring Boot, Spring Cloud Gateway and Eureka. Five independent services communicating through a single API Gateway entry point, with service discovery, JWT authentication and inter-service stock validation.</p>
             </div>
             <div class="project-features">
