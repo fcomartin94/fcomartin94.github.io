@@ -729,14 +729,55 @@ body::before {
       <hr class="section-divider">
       <p class="section-label">Development</p>
       <h2 class="section-title">Code projects</h2>
-      <p class="section-sub">Backend and development projects coming soon.</p>
-      <div class="wip-card">
-        <div class="wip-icon">🏗️</div>
-        <div class="wip-content">
-          <span class="wip-badge">Work in progress</span>
-          <p class="wip-text">
-            <strong>Coming soon.</strong> This section will feature development projects from GitHub — APIs, scripts and other backend implementations.
-          </p>
+      <p class="section-sub">Backend projects built with Java, Spring Boot and PHP — REST APIs, JWT auth and PDF generation.</p>
+
+      <!-- FACTURO -->
+      <div class="project-card">
+        <div class="project-card-inner">
+          <div class="project-preview" style="background:#080d18;">
+            <div class="project-screenshot" style="background:#0d1526;padding:20px;font-family:monospace;font-size:11px;color:#4a9eff;line-height:1.7;max-width:280px;">
+              <div style="color:#6b7fa8;margin-bottom:8px;">$ curl localhost:8080/api/facturas</div>
+              <div style="color:#a8c5ff;">[</div>
+              <div style="color:#c8d8ff;padding-left:12px;">{ "id": 1, "numero": "F-2024-001",</div>
+              <div style="color:#c8d8ff;padding-left:12px;">&nbsp;&nbsp;"total": 847.00, "estado": "EMITIDA" },</div>
+              <div style="color:#c8d8ff;padding-left:12px;">{ "id": 2, "numero": "F-2024-002",</div>
+              <div style="color:#c8d8ff;padding-left:12px;">&nbsp;&nbsp;"total": 1210.00, "estado": "PAGADA" }</div>
+              <div style="color:#a8c5ff;">]</div>
+            </div>
+            <div class="preview-stack">
+              <span class="stack-tag">Java</span>
+              <span class="stack-tag">Spring Boot</span>
+              <span class="stack-tag">PHP</span>
+              <span class="stack-tag">PostgreSQL</span>
+              <span class="stack-tag">JWT</span>
+              <span class="stack-tag">Docker</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-type">REST API · Dual backend</span>
+              <h3 class="project-name">Facturo</h3>
+              <p class="project-desc">Invoicing web app for Spanish freelancers with two independent REST API backends — Java (Spring Boot) and PHP — sharing a single Vanilla JS frontend. Both backends implement identical endpoints, allowing runtime backend switching.</p>
+            </div>
+            <div class="project-features">
+              <div class="feature-row">Dual REST API: Spring Boot 3.3 + PHP 8.2 bare-metal</div>
+              <div class="feature-row">JWT authentication with BCrypt password hashing</div>
+              <div class="feature-row">Client and invoice management — full CRUD</div>
+              <div class="feature-row">Automatic IVA & IRPF calculation (BigDecimal / bcmath)</div>
+              <div class="feature-row">PDF invoice generation (Flying Saucer + Dompdf)</div>
+              <div class="feature-row">IDOR protection — all queries filtered by user</div>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="btn-demo" style="opacity:0.4;pointer-events:none;cursor:default;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Watch demo
+              </a>
+              <a href="https://github.com/fcomartin94/facturo" target="_blank" rel="noopener" class="btn-demo-ghost">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
