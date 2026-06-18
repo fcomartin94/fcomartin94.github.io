@@ -478,10 +478,10 @@ body::before {
   .hero-tagline { text-align: left; }
   .section-sub { text-align: left; }
   .about-bio p { text-align: left; }
-  .tech-grid { grid-template-columns: 1fr; }
-  .tech-category-languages,
-  .cat-db, .cat-cms,
-  .cat-fw, .cat-tools { grid-column: auto; }
+  .tech-grid { grid-template-columns: 1fr 1fr; }
+  .tech-category-languages { grid-column: span 2; }
+  .cat-db, .cat-cms { grid-column: span 1; }
+  .cat-fw, .cat-tools { grid-column: span 2; }
   .tech-tags-2col { grid-template-columns: 1fr; }
   .project-card-inner { grid-template-columns: 1fr; }
   .project-preview { border-right: none; border-bottom: 1px solid var(--glass-b); }
