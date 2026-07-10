@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Francisco Martín — Backend Developer</title>
+<title>Francisco Martín — PrestaShop, WordPress & PHP Developer</title>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -368,54 +368,6 @@ body::before {
   transition: background .2s, border-color .2s, color .2s;
 }
 .btn-demo-ghost:hover { background: var(--glass); border-color: var(--glass-b-hi); color: var(--text-hi); }
-.section-dev {
-  margin-bottom: 80px;
-}
-.wip-card {
-  background: var(--glass);
-  border: 1px solid var(--glass-b);
-  border-radius: var(--r-lg);
-  padding: 40px;
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-.wip-icon {
-  font-size: 48px;
-  line-height: 1;
-  animation: swing 3s ease-in-out infinite;
-  transform-origin: top center;
-  display: inline-block;
-  flex-shrink: 0;
-}
-@keyframes swing {
-  0%,100% { transform: rotate(-4deg); }
-  50%      { transform: rotate(4deg); }
-}
-.wip-content { display: flex; flex-direction: column; gap: 10px; }
-.wip-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--coral-lo);
-  border: 1px solid rgba(58,123,213,0.30);
-  color: var(--coral-hi);
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  padding: 7px 18px;
-  border-radius: 40px;
-  width: fit-content;
-}
-.wip-badge::before {
-  content: '';
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--coral);
-  animation: pulse-dot 2s ease-in-out infinite;
-}
-.wip-text { font-size: 14px; color: var(--text); line-height: 1.7; }
-.wip-text strong { color: var(--text-hi); font-weight: 600; }
 .section-contact { margin-bottom: 40px; }
 .contact-card {
   background: var(--glass);
@@ -588,6 +540,64 @@ body::before {
   height: 40px;
   object-fit: contain;
 }
+
+/* ── Services section ── */
+.section-services { margin-bottom: 80px; }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.service-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-b);
+  border-radius: var(--r-md);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color .2s, background .2s;
+}
+.service-card:hover { border-color: var(--glass-b-hi); background: var(--glass-hi); }
+.service-icon { font-size: 26px; line-height: 1; }
+.service-title { font-size: 15.5px; font-weight: 700; color: var(--text-hi); letter-spacing: -0.01em; }
+.service-desc { font-size: 13.5px; color: var(--text); line-height: 1.6; }
+.process-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: var(--glass);
+  border: 1px solid var(--glass-b);
+  border-radius: var(--r-md);
+  padding: 20px 24px;
+}
+.process-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 150px;
+}
+.process-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--coral-lo);
+  border: 1px solid rgba(58,123,213,0.35);
+  color: var(--coral-hi);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.process-label { font-size: 13px; color: var(--text); font-family: var(--mono); letter-spacing: 0.02em; }
+@media (max-width: 768px) {
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .process-strip { flex-direction: column; }
+}
 </style>
 </head>
 <body>
@@ -598,9 +608,9 @@ body::before {
   <nav class="nav">
     <a href="#top" class="nav-logo">FM.dev</a>
     <div class="nav-links">
-      <a href="#about" class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
       <a href="#ecommerce" class="nav-link">Ecommerce</a>
-      <a href="#dev" class="nav-link">Development</a>
+      <a href="#about" class="nav-link">About</a>
       <a href="#contact" class="nav-link">Contact</a>
     </div>
     <div class="nav-contact">
@@ -621,37 +631,36 @@ body::before {
           <span class="coral">MARTÍN<br>HERZOG</span>
         </h1>
         <p class="hero-tagline">
-          <strong class="coral">Backend developer</strong> building REST APIs and microservices with Java, Spring Boot and PHP — with hands-on ecommerce experience on WordPress, WooCommerce and PrestaShop.
+          <strong class="coral">Ecommerce & web developer</strong> — I build and maintain online stores on WordPress, WooCommerce and PrestaShop, with a focus on PHP, technical SEO and site performance.
         </p>
         <div class="hero-availability">
           <span class="avail-dot"></span>
-          Open to remote work &amp; relocation
+          Available for freelance projects
         </div>
       </div>
       <div class="hero-right">
         <div class="hero-photo-wrap">
           <img src="photo.jpg" alt="Francisco Martín Herzog" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
         </div>
-        <a href="CV_FcoAMartinHersog_EN.pdf" download class="btn-cv">
+        <a href="mailto:martinherzog.fa@gmail.com?subject=Let's%20talk%20about%20your%20project" class="btn-cv">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-            <polyline points="7 10 12 15 17 10"/>
-            <line x1="12" y1="15" x2="12" y2="3"/>
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
           </svg>
-          Download CV
+          Let's talk about your project
         </a>
         <div class="hero-social">
           <a href="https://github.com/fcomartin94" target="_blank" rel="noopener" class="social-link">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
             GitHub
           </a>
-          <a href="#" class="social-link" style="opacity:0.4;pointer-events:none;cursor:default;">
+          <a href="CV_FcoAMartinHersog_EN.pdf" download class="social-link">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
-              <rect x="2" y="9" width="4" height="12"/>
-              <circle cx="4" cy="4" r="2"/>
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
             </svg>
-            LinkedIn
+            CV
           </a>
           <a href="mailto:martinherzog.fa@gmail.com" class="social-link">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -664,84 +673,38 @@ body::before {
       </div>
     </div>
 
-    <section id="about" class="section-about">
+    <section id="services" class="section-services">
       <hr class="section-divider">
-      <h2 class="section-title reveal">About</h2>
-      <div class="about-bio reveal" style="transition-delay:0.1s;">
-        <p>
-          Backend developer finishing a <strong>Higher Vocational Training Diploma in Multiplatform Application Development</strong>,
-          with hands-on experience in Java, Spring Boot, PHP, PostgreSQL and ecommerce platforms.
-          My projects — including a <strong>dual-backend REST invoicing API</strong> and full ecommerce stores
-          built on WordPress and PrestaShop — are available on GitHub.
-        </p>
-        <p>
-          I am self-sufficient and take full ownership of my work, but I collaborate naturally when the project calls for it.
-          I care about getting things right, pick up new technologies quickly, and have also explored the
-          <strong>Arduino ecosystem</strong> — building small embedded systems projects that sparked an interest in
-          lower-level programming. Open to any backend or web development role, in <strong>Spanish or English</strong>.
-        </p>
+      <p class="section-label reveal">What I do</p>
+      <h2 class="section-title reveal" style="transition-delay:0.1s;">Services</h2>
+      <p class="section-sub reveal" style="transition-delay:0.2s;">I help small businesses launch and improve their online stores — from a first WordPress/PrestaShop build to fixing what's already slowing you down.</p>
+      <div class="services-grid reveal" style="transition-delay:0.3s;">
+        <div class="service-card">
+          <span class="service-icon">🛒</span>
+          <h3 class="service-title">Online stores</h3>
+          <p class="service-desc">Full WooCommerce or PrestaShop builds — catalogue, cart, checkout, shipping and payment setup.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🔧</span>
+          <h3 class="service-title">Maintenance & fixes</h3>
+          <p class="service-desc">Ongoing support, bug fixes, plugin/module conflicts and version upgrades for existing sites.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">⚡</span>
+          <h3 class="service-title">Migration & performance</h3>
+          <p class="service-desc">Speed optimisation, hosting migrations and database version fixes so your store runs smoothly.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">📈</span>
+          <h3 class="service-title">Technical SEO</h3>
+          <p class="service-desc">On-page structure, site speed and technical basics to help your store get found.</p>
+        </div>
       </div>
-
-      <p class="section-label reveal" style="margin-bottom:16px;transition-delay:0.2s;">Tech stack</p>
-      <div class="tech-grid reveal" style="transition-delay:0.3s;">
-        <div class="tech-category tech-category-languages">
-          <span class="tech-category-label">Languages</span>
-          <div class="tech-tags-2col">
-            <span class="lang-item"><img src="c++.png" alt="C++">C++</span>
-            <span class="lang-item"><img src="kotlin_icon.png" alt="Kotlin">Kotlin</span>
-            <span class="lang-item"><img src="css.png" alt="CSS">CSS</span>
-            <span class="lang-item"><img src="php.png" alt="PHP">PHP</span>
-            <span class="lang-item"><img src="html_icon.png" alt="HTML">HTML</span>
-            <span class="lang-item"><img src="python_icon.png" alt="Python">Python</span>
-            <span class="lang-item"><img src="java_icon.png" alt="Java">Java</span>
-            <span class="lang-item"><img src="r_icon.png" alt="R">R</span>
-            <span class="lang-item"><img src="js.png" alt="JavaScript">JavaScript</span>
-            <span class="lang-item"><img src="sql_icon.png" alt="SQL">SQL</span>
-          </div>
-        </div>
-        <div class="tech-category cat-db">
-          <span class="tech-category-label">Databases</span>
-          <div class="tech-tags-1col">
-            <span class="stack-tag">PostgreSQL</span>
-            <span class="stack-tag">MySQL</span>
-            <span class="stack-tag">MariaDB</span>
-          </div>
-        </div>
-        <div class="tech-category cat-fw">
-          <span class="tech-category-label">Frameworks & Libraries</span>
-          <div class="tech-tags-2col">
-            <span class="stack-tag">Spring Boot</span>
-            <span class="stack-tag">Spring Security</span>
-            <span class="stack-tag">Spring Data JPA</span>
-            <span class="stack-tag">Hibernate</span>
-            <span class="stack-tag">MapStruct</span>
-            <span class="stack-tag">Lombok</span>
-            <span class="stack-tag">Thymeleaf</span>
-            <span class="stack-tag">Dompdf</span>
-          </div>
-        </div>
-        <div class="tech-category cat-tools">
-          <span class="tech-category-label">Tools & DevOps</span>
-          <div class="tech-tags-2col">
-            <span class="stack-tag">Arduino</span>
-            <span class="stack-tag">Composer</span>
-            <span class="stack-tag">Docker</span>
-            <span class="stack-tag">Git</span>
-            <span class="stack-tag">GitHub</span>
-            <span class="stack-tag">JWT</span>
-            <span class="stack-tag">Maven</span>
-            <span class="stack-tag">XAMPP</span>
-          </div>
-        </div>
-        <div class="tech-category cat-cms">
-          <span class="tech-category-label">CMS & Ecommerce</span>
-          <div class="tech-tags-1col">
-            <span class="stack-tag">WordPress</span>
-            <span class="stack-tag">WooCommerce</span>
-            <span class="stack-tag">PrestaShop</span>
-            <span class="stack-tag">Elementor</span>
-          </div>
-        </div>
+      <div class="process-strip reveal" style="transition-delay:0.35s;">
+        <div class="process-step"><span class="process-num">1</span><span class="process-label">Tell me about your project</span></div>
+        <div class="process-step"><span class="process-num">2</span><span class="process-label">Proposal & quote</span></div>
+        <div class="process-step"><span class="process-num">3</span><span class="process-label">Development</span></div>
+        <div class="process-step"><span class="process-num">4</span><span class="process-label">Delivery & support</span></div>
       </div>
     </section>
 
@@ -749,7 +712,7 @@ body::before {
       <hr class="section-divider">
       <p class="section-label reveal">Ecommerce & CMS</p>
       <h2 class="section-title reveal" style="transition-delay:0.1s;">Online store projects</h2>
-      <p class="section-sub reveal" style="transition-delay:0.2s;">Full implementations on WordPress/WooCommerce and PrestaShop: catalogue, cart, checkout and order management.</p>
+      <p class="section-sub reveal" style="transition-delay:0.2s;">Real store builds on WordPress/WooCommerce and PrestaShop, from catalogue to checkout — the same work I'd do for your store.</p>
       <!-- MYTHIC BOOKS -->
       <div class="project-card reveal" style="transition-delay:0.3s;">
         <div class="project-card-inner">
@@ -774,7 +737,7 @@ body::before {
               <div class="feature-row">10 products with covers, prices and descriptions</div>
               <div class="feature-row">Categories with images and genre filtering</div>
               <div class="feature-row">Cart with real-time item counter</div>
-              <div class="feature-row">Automatic free shipping above €30</div>
+              <div class="feature-row">Free-shipping threshold set to raise average order value</div>
               <div class="feature-row">Full checkout flow and order management</div>
               <div class="feature-row">Custom child theme with own CSS</div>
             </div>
@@ -834,152 +797,80 @@ body::before {
       </div>
     </section>
 
-    <section id="dev" class="section-dev">
+    <section id="about" class="section-about">
       <hr class="section-divider">
-      <p class="section-label reveal">Development</p>
-      <h2 class="section-title reveal" style="transition-delay:0.1s;">Code projects</h2>
-      <p class="section-sub reveal" style="transition-delay:0.2s;">Backend projects built with Java, Spring Boot and PHP — REST APIs, microservices, JWT auth and PDF generation. Plus a native Android app in Kotlin.</p>
-
-      <!-- FACTURO -->
-      <div class="project-card reveal" style="transition-delay:0.3s;">
-        <div class="project-card-inner">
-          <div class="project-preview" style="background:#080d18;">
-            <div class="project-screenshot">
-              <img src="facturo.png" alt="Facturo screenshot">
-            </div>
-            <div class="preview-stack">
-              <span class="stack-tag">Java</span>
-              <span class="stack-tag">Spring Boot</span>
-              <span class="stack-tag">PHP</span>
-              <span class="stack-tag">PostgreSQL</span>
-              <span class="stack-tag">JWT</span>
-              <span class="stack-tag">Docker</span>
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="project-meta">
-              <span class="project-type">REST API · Dual backend</span>
-              <h3 class="project-name">Facturo</h3>
-              <p class="project-desc">Invoicing web app for Spanish freelancers with two independent REST API backends — Java (Spring Boot) and PHP — sharing a single Vanilla JS frontend. Both backends implement identical endpoints, allowing runtime backend switching.</p>
-            </div>
-            <div class="project-features">
-              <div class="feature-row">Dual REST API: Spring Boot 3.3 + PHP 8.2 bare-metal</div>
-              <div class="feature-row">JWT authentication with BCrypt password hashing</div>
-              <div class="feature-row">Client and invoice management — full CRUD</div>
-              <div class="feature-row">Automatic IVA & IRPF calculation (BigDecimal / bcmath)</div>
-              <div class="feature-row">PDF invoice generation (Flying Saucer + Dompdf)</div>
-              <div class="feature-row">IDOR protection — all queries filtered by user</div>
-            </div>
-            <div class="project-actions">
-              <a href="https://youtu.be/hIioS92D6u4" target="_blank" rel="noopener" class="btn-demo">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Watch demo
-              </a>
-              <a href="https://github.com/fcomartin94/facturo" target="_blank" rel="noopener" class="btn-demo-ghost">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                GitHub
-              </a>
-            </div>
-          </div>
-        </div>
+      <h2 class="section-title reveal">About</h2>
+      <div class="about-bio reveal" style="transition-delay:0.1s;">
+        <p>
+          Ecommerce and web developer finishing a <strong>Higher Vocational Training Diploma in Multiplatform Application Development</strong>,
+          with hands-on experience building online stores on WordPress, WooCommerce and PrestaShop, plus PHP
+          development and database work with MySQL/MariaDB. I'll shortly be joining a company that works daily with
+          <strong>PrestaShop, WordPress, PHP and SEO</strong> as part of my professional training — alongside that,
+          I'm taking on freelance web and ecommerce projects now.
+        </p>
+        <p>
+          I am self-sufficient and take full ownership of my work, but I collaborate naturally when the project calls for it.
+          I care about getting things right and pick up new technologies quickly. Open to freelance work or an
+          ecommerce/web development role, in <strong>Spanish or English</strong>.
+        </p>
       </div>
 
-      <!-- FINANZAPP -->
-      <div class="project-card reveal" style="transition-delay:0.15s;">
-        <div class="project-card-inner">
-          <div class="project-preview" style="background:#080d18;">
-            <div class="project-screenshot">
-              <img src="finanz.png" alt="FinanzApp screenshot" style="width:100%;height:100%;object-fit:cover;display:block;">
-            </div>
-            <div class="preview-stack">
-              <span class="stack-tag">Java</span>
-              <span class="stack-tag">Spring Boot</span>
-              <span class="stack-tag">Kotlin</span>
-              <span class="stack-tag">Jetpack Compose</span>
-              <span class="stack-tag">Room</span>
-              <span class="stack-tag">H2</span>
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="project-meta">
-              <span class="project-type">Monorepo · CLI + REST API + Android</span>
-              <h3 class="project-name">FinanzApp</h3>
-              <p class="project-desc">Personal finance ecosystem implemented across three independent layers: a pure Java CLI with CSV persistence, a Spring Boot REST API, and a native Android app in Kotlin. The same domain logic and business rules are deliberately applied with increasing levels of abstraction in each module.</p>
-            </div>
-            <div class="project-features">
-              <div class="feature-row">Three independent modules sharing the same financial domain</div>
-              <div class="feature-row">CLI — layered architecture, no frameworks, custom test runner</div>
-              <div class="feature-row">REST API — Spring Data JPA, derived queries, @SpringBootTest integration tests</div>
-              <div class="feature-row">Android — MVVM, StateFlow, Room/SQLite, offline-first</div>
-              <div class="feature-row">Reactive UI with Flow — any Room write propagates automatically</div>
-            </div>
-            <div class="project-actions">
-              <a href="https://youtu.be/WIHIM67ZJSA" target="_blank" rel="noopener" class="btn-demo">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                Watch demo
-              </a>
-              <a href="https://github.com/fcomartin94/finanz-core" target="_blank" rel="noopener" class="btn-demo-ghost">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                GitHub
-              </a>
-            </div>
+      <p class="section-label reveal" style="margin-bottom:16px;transition-delay:0.2s;">Tech stack</p>
+      <div class="tech-grid reveal" style="transition-delay:0.3s;">
+        <div class="tech-category tech-category-languages">
+          <span class="tech-category-label">Languages</span>
+          <div class="tech-tags-2col">
+            <span class="lang-item"><img src="php.png" alt="PHP">PHP</span>
+            <span class="lang-item"><img src="css.png" alt="CSS">CSS</span>
+            <span class="lang-item"><img src="html_icon.png" alt="HTML">HTML</span>
+            <span class="lang-item"><img src="js.png" alt="JavaScript">JavaScript</span>
+            <span class="lang-item"><img src="sql_icon.png" alt="SQL">SQL</span>
           </div>
         </div>
-      </div>
-
-      <!-- ECOMMERCE MICROSERVICES -->
-      <div class="project-card reveal" style="transition-delay:0.15s;">
-        <div class="project-card-inner">
-          <div class="project-preview" style="background:#080d18;">
-            <div class="project-screenshot">
-              <img src="ecommerce-microservices.png" alt="ecommerce-microservices screenshot" style="width:100%;height:100%;object-fit:cover;display:block;">
-            </div>
-            <div class="preview-stack">
-              <span class="stack-tag">Java</span>
-              <span class="stack-tag">Spring Boot</span>
-              <span class="stack-tag">Spring Cloud</span>
-              <span class="stack-tag">PostgreSQL</span>
-              <span class="stack-tag">Eureka</span>
-              <span class="stack-tag">JWT</span>
-            </div>
+        <div class="tech-category cat-db">
+          <span class="tech-category-label">Databases</span>
+          <div class="tech-tags-1col">
+            <span class="stack-tag">MySQL</span>
+            <span class="stack-tag">MariaDB</span>
           </div>
-          <div class="project-info">
-            <div class="project-meta">
-              <span class="project-type">Microservices · Spring Cloud</span>
-              <h3 class="project-name">ecommerce-microservices</h3>
-              <p class="project-desc">Full microservices backend with Spring Boot, Spring Cloud Gateway and Eureka. Five independent services communicating through a single API Gateway entry point, with service discovery, JWT authentication and inter-service stock validation.</p>
-            </div>
-            <div class="project-features">
-              <div class="feature-row">5 independent services: Eureka, Gateway, User, Product, Order</div>
-              <div class="feature-row">Spring Cloud Gateway as single public entry point (:8080)</div>
-              <div class="feature-row">Eureka service discovery — no hardcoded hosts (lb:// routing)</div>
-              <div class="feature-row">JWT authentication with BCrypt in user-service</div>
-              <div class="feature-row">Inter-service stock validation via LoadBalanced RestTemplate</div>
-              <div class="feature-row">409 on insufficient stock, 200 with remainingStock on success</div>
-            </div>
-            <div class="project-actions">
-              <a href="https://youtu.be/spFJ0sGB9QU" target="_blank" rel="noopener" class="btn-demo">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Watch demo
-              </a>
-              <a href="https://github.com/fcomartin94/ecommerce-microservices" target="_blank" rel="noopener" class="btn-demo-ghost">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                GitHub
-              </a>
-            </div>
+        </div>
+        <div class="tech-category cat-fw">
+          <span class="tech-category-label">Frameworks & Libraries</span>
+          <div class="tech-tags-2col">
+            <span class="stack-tag">Dompdf</span>
+            <span class="stack-tag">Composer</span>
+          </div>
+        </div>
+        <div class="tech-category cat-tools">
+          <span class="tech-category-label">Tools & DevOps</span>
+          <div class="tech-tags-2col">
+            <span class="stack-tag">Composer</span>
+            <span class="stack-tag">Git</span>
+            <span class="stack-tag">GitHub</span>
+            <span class="stack-tag">XAMPP</span>
+          </div>
+        </div>
+        <div class="tech-category cat-cms">
+          <span class="tech-category-label">CMS & Ecommerce</span>
+          <div class="tech-tags-1col">
+            <span class="stack-tag">WordPress</span>
+            <span class="stack-tag">WooCommerce</span>
+            <span class="stack-tag">PrestaShop</span>
+            <span class="stack-tag">Elementor</span>
           </div>
         </div>
       </div>
     </section>
 
+
     <section id="contact" class="section-contact">
       <hr class="section-divider">
       <div class="contact-card reveal">
         <p class="section-label">Get in touch</p>
-        <h2 class="contact-title">Let's talk</h2>
-        <p class="contact-sub">Open to backend and web development roles — remote or relocation, in Spanish or English. Feel free to reach out.</p>
+        <h2 class="contact-title">Let's talk about your project</h2>
+        <p class="contact-sub">Need an online store built or an existing one fixed and running smoothly? I'm taking on freelance projects now. Also open to ecommerce and web development roles, remote or relocation, in Spanish or English.</p>
         <div class="contact-actions">
-          <a href="mailto:martinherzog.fa@gmail.com" class="btn-demo">
+          <a href="mailto:martinherzog.fa@gmail.com?subject=Let's%20talk%20about%20your%20project" class="btn-demo">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             martinherzog.fa@gmail.com
           </a>
