@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Francisco Martín — Backend Developer</title>
+<title>Francisco Martín — Web & Ecommerce Developer</title>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -588,6 +588,64 @@ body::before {
   height: 40px;
   object-fit: contain;
 }
+
+/* ── Services section ── */
+.section-services { margin-bottom: 80px; }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.service-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-b);
+  border-radius: var(--r-md);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color .2s, background .2s;
+}
+.service-card:hover { border-color: var(--glass-b-hi); background: var(--glass-hi); }
+.service-icon { font-size: 26px; line-height: 1; }
+.service-title { font-size: 15.5px; font-weight: 700; color: var(--text-hi); letter-spacing: -0.01em; }
+.service-desc { font-size: 13.5px; color: var(--text); line-height: 1.6; }
+.process-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: var(--glass);
+  border: 1px solid var(--glass-b);
+  border-radius: var(--r-md);
+  padding: 20px 24px;
+}
+.process-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 150px;
+}
+.process-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--coral-lo);
+  border: 1px solid rgba(58,123,213,0.35);
+  color: var(--coral-hi);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.process-label { font-size: 13px; color: var(--text); font-family: var(--mono); letter-spacing: 0.02em; }
+@media (max-width: 768px) {
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .process-strip { flex-direction: column; }
+}
 </style>
 </head>
 <body>
@@ -598,8 +656,9 @@ body::before {
   <nav class="nav">
     <a href="#top" class="nav-logo">FM.dev</a>
     <div class="nav-links">
-      <a href="#about" class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
       <a href="#ecommerce" class="nav-link">Ecommerce</a>
+      <a href="#about" class="nav-link">About</a>
       <a href="#dev" class="nav-link">Development</a>
       <a href="#contact" class="nav-link">Contact</a>
     </div>
@@ -621,37 +680,36 @@ body::before {
           <span class="coral">MARTÍN<br>HERZOG</span>
         </h1>
         <p class="hero-tagline">
-          <strong class="coral">Backend developer</strong> building REST APIs and microservices with Java, Spring Boot and PHP — with hands-on ecommerce experience on WordPress, WooCommerce and PrestaShop.
+          <strong class="coral">Web & ecommerce developer</strong> — I build and maintain online stores on WordPress, WooCommerce and PrestaShop. Also a backend developer building REST APIs and microservices with Java, Spring Boot and PHP.
         </p>
         <div class="hero-availability">
           <span class="avail-dot"></span>
-          Open to remote work &amp; relocation
+          Available for freelance projects
         </div>
       </div>
       <div class="hero-right">
         <div class="hero-photo-wrap">
           <img src="photo.jpg" alt="Francisco Martín Herzog" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
         </div>
-        <a href="CV_FcoAMartinHersog_EN.pdf" download class="btn-cv">
+        <a href="mailto:martinherzog.fa@gmail.com?subject=Let's%20talk%20about%20your%20project" class="btn-cv">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-            <polyline points="7 10 12 15 17 10"/>
-            <line x1="12" y1="15" x2="12" y2="3"/>
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
           </svg>
-          Download CV
+          Let's talk about your project
         </a>
         <div class="hero-social">
           <a href="https://github.com/fcomartin94" target="_blank" rel="noopener" class="social-link">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
             GitHub
           </a>
-          <a href="#" class="social-link" style="opacity:0.4;pointer-events:none;cursor:default;">
+          <a href="CV_FcoAMartinHersog_EN.pdf" download class="social-link">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
-              <rect x="2" y="9" width="4" height="12"/>
-              <circle cx="4" cy="4" r="2"/>
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
             </svg>
-            LinkedIn
+            CV
           </a>
           <a href="mailto:martinherzog.fa@gmail.com" class="social-link">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -664,21 +722,146 @@ body::before {
       </div>
     </div>
 
+    <section id="services" class="section-services">
+      <hr class="section-divider">
+      <p class="section-label reveal">What I do</p>
+      <h2 class="section-title reveal" style="transition-delay:0.1s;">Services</h2>
+      <p class="section-sub reveal" style="transition-delay:0.2s;">I help small businesses launch and improve their online stores — from a first WordPress/PrestaShop build to fixing what's already slowing you down.</p>
+      <div class="services-grid reveal" style="transition-delay:0.3s;">
+        <div class="service-card">
+          <span class="service-icon">🛒</span>
+          <h3 class="service-title">Online stores</h3>
+          <p class="service-desc">Full WooCommerce or PrestaShop builds — catalogue, cart, checkout, shipping and payment setup.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🔧</span>
+          <h3 class="service-title">Maintenance & fixes</h3>
+          <p class="service-desc">Ongoing support, bug fixes, plugin/module conflicts and version upgrades for existing sites.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">⚡</span>
+          <h3 class="service-title">Migration & performance</h3>
+          <p class="service-desc">Speed optimisation, hosting migrations and database version fixes so your store runs smoothly.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">📈</span>
+          <h3 class="service-title">Technical SEO</h3>
+          <p class="service-desc">On-page structure, site speed and technical basics to help your store get found.</p>
+        </div>
+      </div>
+      <div class="process-strip reveal" style="transition-delay:0.35s;">
+        <div class="process-step"><span class="process-num">1</span><span class="process-label">Tell me about your project</span></div>
+        <div class="process-step"><span class="process-num">2</span><span class="process-label">Proposal & quote</span></div>
+        <div class="process-step"><span class="process-num">3</span><span class="process-label">Development</span></div>
+        <div class="process-step"><span class="process-num">4</span><span class="process-label">Delivery & support</span></div>
+      </div>
+    </section>
+
+    <section id="ecommerce" class="section-ecommerce">
+      <hr class="section-divider">
+      <p class="section-label reveal">Ecommerce & CMS</p>
+      <h2 class="section-title reveal" style="transition-delay:0.1s;">Online store projects</h2>
+      <p class="section-sub reveal" style="transition-delay:0.2s;">Real store builds on WordPress/WooCommerce and PrestaShop, from catalogue to checkout — the same work I'd do for your store.</p>
+      <!-- MYTHIC BOOKS -->
+      <div class="project-card reveal" style="transition-delay:0.3s;">
+        <div class="project-card-inner">
+          <div class="project-preview">
+            <div class="project-screenshot">
+              <img src="mythic-books.png" alt="Mythic Books screenshot">
+            </div>
+            <div class="preview-stack">
+              <span class="stack-tag">WordPress</span>
+              <span class="stack-tag">WooCommerce</span>
+              <span class="stack-tag">Elementor</span>
+              <span class="stack-tag">PHP</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-type">Online store · WordPress</span>
+              <h3 class="project-name">Mythic Books</h3>
+              <p class="project-desc">Book store specialising in medieval fiction, space opera and history. Full implementation from scratch: catalogue, cart, checkout and order management.</p>
+            </div>
+            <div class="project-features">
+              <div class="feature-row">10 products with covers, prices and descriptions</div>
+              <div class="feature-row">Categories with images and genre filtering</div>
+              <div class="feature-row">Cart with real-time item counter</div>
+              <div class="feature-row">Free-shipping threshold set to raise average order value</div>
+              <div class="feature-row">Full checkout flow and order management</div>
+              <div class="feature-row">Custom child theme with own CSS</div>
+            </div>
+            <div class="project-actions">
+              <a href="https://youtu.be/xevh2MCGSX8" target="_blank" rel="noopener" class="btn-demo">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Watch demo
+              </a>
+              <a href="https://github.com/fcomartin94/mythic-books-woocommerce" target="_blank" rel="noopener" class="btn-demo-ghost">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BREW & CO. -->
+      <div class="project-card reveal" style="transition-delay:0.15s;">
+        <div class="project-card-inner">
+          <div class="project-preview">
+            <div class="project-screenshot">
+              <img src="brew-co.png" alt="Brew &amp; Co. screenshot">
+            </div>
+            <div class="preview-stack">
+              <span class="stack-tag coffee-tag">PrestaShop</span>
+              <span class="stack-tag coffee-tag">PHP</span>
+              <span class="stack-tag coffee-tag">MySQL</span>
+              <span class="stack-tag coffee-tag">XAMPP</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-type">Online store · PrestaShop</span>
+              <h3 class="project-name">Brew & Co.</h3>
+              <p class="project-desc">Specialty coffee store built on PrestaShop 8. Catalogue of single origins, blends and equipment. Includes resolution of PHP and MySQL version conflicts in a local development environment.</p>
+            </div>
+            <div class="project-features">
+              <div class="feature-row">10 products across 3 categories: Single Origin, Blends, Equipment</div>
+              <div class="feature-row">Homepage with image slider and featured products</div>
+              <div class="feature-row">Carrier configured with flat rate (€4.99)</div>
+              <div class="feature-row">Automatic free shipping above €30</div>
+              <div class="feature-row">Database migration between MySQL versions</div>
+              <div class="feature-row">Startup script for local development environment</div>
+            </div>
+            <div class="project-actions">
+              <a href="https://youtu.be/_N138kK4SGU" target="_blank" rel="noopener" class="btn-demo">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Watch demo
+              </a>
+              <a href="https://github.com/fcomartin94/brew-co-prestashop" target="_blank" rel="noopener" class="btn-demo-ghost">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="about" class="section-about">
       <hr class="section-divider">
       <h2 class="section-title reveal">About</h2>
       <div class="about-bio reveal" style="transition-delay:0.1s;">
         <p>
-          Backend developer finishing a <strong>Higher Vocational Training Diploma in Multiplatform Application Development</strong>,
-          with hands-on experience in Java, Spring Boot, PHP, PostgreSQL and ecommerce platforms.
-          My projects — including a <strong>dual-backend REST invoicing API</strong> and full ecommerce stores
-          built on WordPress and PrestaShop — are available on GitHub.
+          Web and ecommerce developer finishing a <strong>Higher Vocational Training Diploma in Multiplatform Application Development</strong>,
+          with hands-on experience building online stores on WordPress, WooCommerce and PrestaShop, plus backend work in
+          Java, Spring Boot, PHP and PostgreSQL. I'll shortly be joining a company that works daily with
+          <strong>PrestaShop, WordPress, PHP and SEO</strong> as part of my professional training — alongside that,
+          I'm taking on freelance web and ecommerce projects now.
         </p>
         <p>
           I am self-sufficient and take full ownership of my work, but I collaborate naturally when the project calls for it.
           I care about getting things right, pick up new technologies quickly, and have also explored the
           <strong>Arduino ecosystem</strong> — building small embedded systems projects that sparked an interest in
-          lower-level programming. Open to any backend or web development role, in <strong>Spanish or English</strong>.
+          lower-level programming. Open to freelance work or a backend/web development role, in <strong>Spanish or English</strong>.
         </p>
       </div>
 
@@ -745,94 +928,6 @@ body::before {
       </div>
     </section>
 
-    <section id="ecommerce" class="section-ecommerce">
-      <hr class="section-divider">
-      <p class="section-label reveal">Ecommerce & CMS</p>
-      <h2 class="section-title reveal" style="transition-delay:0.1s;">Online store projects</h2>
-      <p class="section-sub reveal" style="transition-delay:0.2s;">Full implementations on WordPress/WooCommerce and PrestaShop: catalogue, cart, checkout and order management.</p>
-      <!-- MYTHIC BOOKS -->
-      <div class="project-card reveal" style="transition-delay:0.3s;">
-        <div class="project-card-inner">
-          <div class="project-preview">
-            <div class="project-screenshot">
-              <img src="mythic-books.png" alt="Mythic Books screenshot">
-            </div>
-            <div class="preview-stack">
-              <span class="stack-tag">WordPress</span>
-              <span class="stack-tag">WooCommerce</span>
-              <span class="stack-tag">Elementor</span>
-              <span class="stack-tag">PHP</span>
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="project-meta">
-              <span class="project-type">Online store · WordPress</span>
-              <h3 class="project-name">Mythic Books</h3>
-              <p class="project-desc">Book store specialising in medieval fiction, space opera and history. Full implementation from scratch: catalogue, cart, checkout and order management.</p>
-            </div>
-            <div class="project-features">
-              <div class="feature-row">10 products with covers, prices and descriptions</div>
-              <div class="feature-row">Categories with images and genre filtering</div>
-              <div class="feature-row">Cart with real-time item counter</div>
-              <div class="feature-row">Automatic free shipping above €30</div>
-              <div class="feature-row">Full checkout flow and order management</div>
-              <div class="feature-row">Custom child theme with own CSS</div>
-            </div>
-            <div class="project-actions">
-              <a href="https://youtu.be/xevh2MCGSX8" target="_blank" rel="noopener" class="btn-demo">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Watch demo
-              </a>
-              <a href="https://github.com/fcomartin94/mythic-books-woocommerce" target="_blank" rel="noopener" class="btn-demo-ghost">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                GitHub
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- BREW & CO. -->
-      <div class="project-card reveal" style="transition-delay:0.15s;">
-        <div class="project-card-inner">
-          <div class="project-preview">
-            <div class="project-screenshot">
-              <img src="brew-co.png" alt="Brew &amp; Co. screenshot">
-            </div>
-            <div class="preview-stack">
-              <span class="stack-tag coffee-tag">PrestaShop</span>
-              <span class="stack-tag coffee-tag">PHP</span>
-              <span class="stack-tag coffee-tag">MySQL</span>
-              <span class="stack-tag coffee-tag">XAMPP</span>
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="project-meta">
-              <span class="project-type">Online store · PrestaShop</span>
-              <h3 class="project-name">Brew & Co.</h3>
-              <p class="project-desc">Specialty coffee store built on PrestaShop 8. Catalogue of single origins, blends and equipment. Includes resolution of PHP and MySQL version conflicts in a local development environment.</p>
-            </div>
-            <div class="project-features">
-              <div class="feature-row">10 products across 3 categories: Single Origin, Blends, Equipment</div>
-              <div class="feature-row">Homepage with image slider and featured products</div>
-              <div class="feature-row">Carrier configured with flat rate (€4.99)</div>
-              <div class="feature-row">Automatic free shipping above €30</div>
-              <div class="feature-row">Database migration between MySQL versions</div>
-              <div class="feature-row">Startup script for local development environment</div>
-            </div>
-            <div class="project-actions">
-              <a href="https://youtu.be/_N138kK4SGU" target="_blank" rel="noopener" class="btn-demo">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Watch demo
-              </a>
-              <a href="https://github.com/fcomartin94/brew-co-prestashop" target="_blank" rel="noopener" class="btn-demo-ghost">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                GitHub
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section id="dev" class="section-dev">
       <hr class="section-divider">
@@ -976,10 +1071,10 @@ body::before {
       <hr class="section-divider">
       <div class="contact-card reveal">
         <p class="section-label">Get in touch</p>
-        <h2 class="contact-title">Let's talk</h2>
-        <p class="contact-sub">Open to backend and web development roles — remote or relocation, in Spanish or English. Feel free to reach out.</p>
+        <h2 class="contact-title">Let's talk about your project</h2>
+        <p class="contact-sub">Need an online store built or an existing one fixed and running smoothly? I'm taking on freelance projects now. Also open to backend and web development roles, remote or relocation, in Spanish or English.</p>
         <div class="contact-actions">
-          <a href="mailto:martinherzog.fa@gmail.com" class="btn-demo">
+          <a href="mailto:martinherzog.fa@gmail.com?subject=Let's%20talk%20about%20your%20project" class="btn-demo">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             martinherzog.fa@gmail.com
           </a>
