@@ -418,6 +418,10 @@ body::before {
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: rgba(58,123,213,.28); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(58,123,213,.50); }
+@media (max-width: 900px) {
+  .tech-grid { grid-template-columns: repeat(2, 1fr); }
+  .tech-category-tools { grid-column: span 2; }
+}
 @media (max-width: 768px) {
   .nav { padding: 16px 20px; }
   .nav-links { display: none; }
@@ -431,12 +435,8 @@ body::before {
   .section-sub { text-align: left; }
   .about-bio p { text-align: left; }
   .tech-grid { grid-template-columns: 1fr; }
-  .tech-category-languages,
-  .cat-db, .cat-cms,
-  .cat-fw, .cat-tools { grid-column: auto; }
+  .tech-category-tools { grid-column: auto; }
   .tech-category { min-width: 0; }
-  .tech-tags-2col { grid-template-columns: 1fr; min-width: 0; }
-  .tech-tags-2col > * { min-width: 0; }
   .project-card-inner { grid-template-columns: 1fr; }
   .project-preview { border-right: none; border-bottom: 1px solid var(--glass-b); }
   .wip-card { flex-direction: column; gap: 20px; padding: 28px; }
@@ -469,11 +469,11 @@ body::before {
 /* ── Tech stack ── */
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   align-items: stretch;
 }
-.tech-category-languages { grid-column: span 2; }
+.tech-category-tools { grid-column: span 4; }
 .tech-category {
   background: var(--glass);
   border: 1px solid var(--glass-b);
@@ -488,30 +488,7 @@ body::before {
 }
 .tech-category:hover { border-color: var(--glass-b-hi); background: var(--glass-hi); }
 
-/* ── Category accent colours — blue family ── */
-/* Databases — azul eléctrico */
-.cat-db { border-color: rgba(50,130,255,0.18); }
-.cat-db:hover { border-color: rgba(50,130,255,0.35); background: rgba(50,130,255,0.06); }
-.cat-db .tech-category-label { color: #5b9fff; }
-.cat-db .stack-tag { color: #7ab4ff; background: rgba(50,130,255,0.10); border-color: rgba(50,130,255,0.25); }
-
-/* Frameworks & Libraries — azul índigo */
-.cat-fw { border-color: rgba(80,80,220,0.18); }
-.cat-fw:hover { border-color: rgba(80,80,220,0.35); background: rgba(80,80,220,0.06); }
-.cat-fw .tech-category-label { color: #8080e0; }
-.cat-fw .stack-tag { color: #a0a0f0; background: rgba(80,80,220,0.10); border-color: rgba(80,80,220,0.25); }
-
-/* Tools & DevOps — azul acero claro */
-.cat-tools { border-color: rgba(90,160,230,0.18); }
-.cat-tools:hover { border-color: rgba(90,160,230,0.35); background: rgba(90,160,230,0.06); }
-.cat-tools .tech-category-label { color: #70b8f0; }
-.cat-tools .stack-tag { color: #90ceff; background: rgba(90,160,230,0.10); border-color: rgba(90,160,230,0.25); }
-
-/* CMS & Ecommerce — azul marino suave */
-.cat-cms { border-color: rgba(40,90,180,0.22); }
-.cat-cms:hover { border-color: rgba(40,90,180,0.40); background: rgba(40,90,180,0.07); }
-.cat-cms .tech-category-label { color: #5578c8; }
-.cat-cms .stack-tag { color: #7898e0; background: rgba(40,90,180,0.12); border-color: rgba(40,90,180,0.28); }
+/* ── Single accent colour across all categories for visual consistency ── */
 .tech-category-label {
   font-family: var(--mono);
   font-size: 12.5px;
@@ -520,24 +497,34 @@ body::before {
   color: var(--coral);
 }
 .tech-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-.tech-tags-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
-.tech-tags-1col { display: flex; flex-direction: column; gap: 6px; }
+.tech-tags-col { flex-direction: column; align-items: flex-start; }
+.stack-tag {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  letter-spacing: 0.05em;
+  color: #7ab4ff;
+  background: rgba(58,123,213,0.10);
+  border: 1px solid rgba(58,123,213,0.25);
+  padding: 6px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
 .lang-item {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
   font-family: var(--mono);
   font-size: 13px;
   letter-spacing: 0.08em;
   color: var(--coral-hi);
   background: var(--coral-lo);
   border: 1px solid rgba(58,123,213,0.25);
-  padding: 6px 15px 6px 10px;
+  padding: 6px 15px 6px 8px;
   border-radius: 999px;
 }
 .lang-item img {
-  width: 40px;
-  height: 40px;
+  width: 22px;
+  height: 22px;
   object-fit: contain;
 }
 
@@ -633,10 +620,7 @@ body::before {
         <p class="hero-tagline">
           <strong class="coral">Ecommerce & web developer</strong> — I build and maintain online stores on WordPress, WooCommerce and PrestaShop, with a focus on PHP, technical SEO and site performance.
         </p>
-        <div class="hero-availability">
-          <span class="avail-dot"></span>
-          Available for freelance projects
-        </div>
+
       </div>
       <div class="hero-right">
         <div class="hero-photo-wrap">
@@ -901,48 +885,49 @@ body::before {
 
       <p class="section-label reveal" style="margin-bottom:16px;transition-delay:0.2s;">Tech stack</p>
       <div class="tech-grid reveal" style="transition-delay:0.3s;">
-        <div class="tech-category tech-category-languages">
-          <span class="tech-category-label">Languages</span>
-          <div class="tech-tags-2col">
+        <div class="tech-category">
+          <span class="tech-category-label">Main Language</span>
+          <div class="tech-tags">
             <span class="lang-item"><img src="php.png" alt="PHP">PHP</span>
-            <span class="lang-item"><img src="sql_icon.png" alt="SQL">SQL</span>
           </div>
         </div>
-        <div class="tech-category cat-db">
+        <div class="tech-category">
           <span class="tech-category-label">Databases</span>
-          <div class="tech-tags-1col">
-            <span class="stack-tag">MySQL</span>
+          <div class="tech-tags tech-tags-col">
             <span class="stack-tag">MariaDB</span>
+            <span class="stack-tag">MySQL</span>
+            <span class="stack-tag">PostgreSQL</span>
+            <span class="stack-tag">SQL</span>
           </div>
         </div>
-        <div class="tech-category cat-fw">
+        <div class="tech-category">
           <span class="tech-category-label">Frameworks & Libraries</span>
-          <div class="tech-tags-2col">
+          <div class="tech-tags">
             <span class="stack-tag">Composer</span>
-            <span class="stack-tag">XML / XMLWriter</span>
             <span class="stack-tag">Schema.org / JSON-LD</span>
+            <span class="stack-tag">XML / XMLWriter</span>
           </div>
         </div>
-        <div class="tech-category cat-tools">
+        <div class="tech-category">
+          <span class="tech-category-label">CMS & Ecommerce</span>
+          <div class="tech-tags">
+            <span class="stack-tag">Elementor</span>
+            <span class="stack-tag">PrestaShop</span>
+            <span class="stack-tag">WooCommerce</span>
+            <span class="stack-tag">WordPress</span>
+          </div>
+        </div>
+        <div class="tech-category tech-category-tools">
           <span class="tech-category-label">Tools & DevOps</span>
-          <div class="tech-tags-2col">
+          <div class="tech-tags">
             <span class="stack-tag">Docker</span>
             <span class="stack-tag">Docker Compose</span>
             <span class="stack-tag">Git</span>
             <span class="stack-tag">GitHub</span>
             <span class="stack-tag">Lighthouse</span>
+            <span class="stack-tag">Local</span>
             <span class="stack-tag">WP-CLI</span>
             <span class="stack-tag">XAMPP</span>
-            <span class="stack-tag">Local</span>
-          </div>
-        </div>
-        <div class="tech-category cat-cms">
-          <span class="tech-category-label">CMS & Ecommerce</span>
-          <div class="tech-tags-1col">
-            <span class="stack-tag">WordPress</span>
-            <span class="stack-tag">WooCommerce</span>
-            <span class="stack-tag">PrestaShop</span>
-            <span class="stack-tag">Elementor</span>
           </div>
         </div>
       </div>
