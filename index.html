@@ -836,73 +836,41 @@ body::before {
           </div>
         </div>
       </div>
-      <!-- FEED EXPORT FOR GOOGLE SHOPPING - PRESTASHOP -->
+      <!-- FEED EXPORT FOR GOOGLE SHOPPING - PRESTASHOP + WOOCOMMERCE -->
       <div class="project-card reveal" style="transition-delay:0.5s;">
         <div class="project-card-inner">
           <div class="project-preview">
             <div class="project-screenshot">
-              <img src="feedgoogleshopping-prestashop.png" alt="Feed Export for Google Shopping (PrestaShop) screenshot">
+              <img src="feedgoogleshopping-prestashop.png" alt="Feed Export for Google Shopping screenshot">
             </div>
             <div class="preview-stack">
-              <span class="stack-tag coffee-tag">PrestaShop</span>
-              <span class="stack-tag coffee-tag">PHP</span>
-              <span class="stack-tag coffee-tag">Module dev</span>
-              <span class="stack-tag coffee-tag">XML</span>
+              <span class="stack-tag">PrestaShop</span>
+              <span class="stack-tag">WooCommerce</span>
+              <span class="stack-tag">PHP</span>
+              <span class="stack-tag">Module &amp; plugin dev</span>
             </div>
           </div>
           <div class="project-info">
             <div class="project-meta">
-              <span class="project-type">Custom module · PrestaShop</span>
+              <span class="project-type">Custom module + plugin · PrestaShop &amp; WooCommerce</span>
               <h3 class="project-name">Feed Export for Google Shopping</h3>
-              <p class="project-desc">Custom PrestaShop module built from scratch: a front controller that generates a public XML product feed compatible with Google Merchant Center, straight from the catalog's real stock and pricing.</p>
+              <p class="project-desc">The same feature, built twice from scratch on two different platforms: a PrestaShop module and a WooCommerce plugin that each generate a public XML product feed compatible with Google Merchant Center, straight from the store's real stock and pricing. Same problem, solved on each platform's own architecture — not a copy-paste port.</p>
             </div>
             <div class="project-features">
-              <div class="feature-row">One feed item per sellable variant, matching Google's expected format</div>
-              <div class="feature-row">Real-time stock and tax-included pricing via PrestaShop's own classes</div>
-              <div class="feature-row">Fixed a real bug: variant URLs using unreachable "#fragment" links</div>
-              <div class="feature-row">Safe XML generation with XMLWriter, no manual string concatenation</div>
-              <div class="feature-row">Tested end-to-end against the Volt & Circuit catalog (26 variants)</div>
+              <div class="feature-row">One feed item per sellable variant, matching Google's expected format on both platforms</div>
+              <div class="feature-row">Real-time stock and tax-included pricing read via each platform's own product classes, not raw SQL</div>
+              <div class="feature-row">PrestaShop: fixed a real bug — variant URLs using unreachable "#fragment" links</div>
+              <div class="feature-row">WooCommerce: diagnosed and fixed a 404 caused by default "Plain" WordPress permalinks</div>
+              <div class="feature-row">Tested end-to-end against real catalogs (Volt & Circuit / a WooCommerce test store)</div>
             </div>
             <div class="project-actions">
               <a href="https://github.com/fcomartin94/feedgoogleshopping-prestashop" target="_blank" rel="noopener" class="btn-demo-ghost">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                GitHub
+                GitHub · PrestaShop
               </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- FEED EXPORT FOR GOOGLE SHOPPING - WOOCOMMERCE -->
-      <div class="project-card reveal" style="transition-delay:0.55s;">
-        <div class="project-card-inner">
-          <div class="project-preview">
-            <div class="project-screenshot">
-              <img src="feedgoogleshopping-woocommerce.png" alt="Feed Export for Google Shopping (WooCommerce) screenshot">
-            </div>
-            <div class="preview-stack">
-              <span class="stack-tag">WordPress</span>
-              <span class="stack-tag">WooCommerce</span>
-              <span class="stack-tag">PHP</span>
-              <span class="stack-tag">Plugin dev</span>
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="project-meta">
-              <span class="project-type">Custom plugin · WooCommerce</span>
-              <h3 class="project-name">Feed Export for Google Shopping</h3>
-              <p class="project-desc">The same Google Shopping feed generator rebuilt as a WordPress/WooCommerce plugin, using its own rewrite-rule routing and product CRUD API — same problem, solved on a second platform's own idioms.</p>
-            </div>
-            <div class="project-features">
-              <div class="feature-row">Public feed URL via WordPress rewrite rules, no external dependencies</div>
-              <div class="feature-row">Expands variable products into one feed item per variation</div>
-              <div class="feature-row">Diagnosed and fixed a 404 caused by default "Plain" WordPress permalinks</div>
-              <div class="feature-row">Reads price, stock and SKU through WooCommerce's own product classes</div>
-              <div class="feature-row">Declares its WooCommerce dependency via the plugin header</div>
-            </div>
-            <div class="project-actions">
               <a href="https://github.com/fcomartin94/feedgoogleshopping-woocommerce" target="_blank" rel="noopener" class="btn-demo-ghost">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                GitHub
+                GitHub · WooCommerce
               </a>
             </div>
           </div>
