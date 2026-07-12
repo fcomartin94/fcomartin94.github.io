@@ -287,16 +287,6 @@ body::before {
   position: relative;
   z-index: 1;
 }
-.stack-tag {
-  font-family: var(--mono);
-  font-size: 13px;
-  letter-spacing: 0.08em;
-  color: var(--coral-hi);
-  background: var(--coral-lo);
-  border: 1px solid rgba(58,123,213,0.25);
-  padding: 5px 13px;
-  border-radius: 999px;
-}
 .stack-tag.coffee-tag {
   color: rgba(210,160,80,0.9);
   background: rgba(139,90,40,0.15);
@@ -595,9 +585,9 @@ body::before {
   <nav class="nav">
     <a href="#top" class="nav-logo">FM.dev</a>
     <div class="nav-links">
+      <a href="#about" class="nav-link">About</a>
       <a href="#services" class="nav-link">Services</a>
       <a href="#ecommerce" class="nav-link">Ecommerce</a>
-      <a href="#about" class="nav-link">About</a>
       <a href="#contact" class="nav-link">Contact</a>
     </div>
     <div class="nav-contact">
@@ -656,6 +646,74 @@ body::before {
         </div>
       </div>
     </div>
+
+    <section id="about" class="section-about">
+      <hr class="section-divider">
+      <h2 class="section-title reveal">About</h2>
+      <div class="about-bio reveal" style="transition-delay:0.1s;">
+        <p>
+          Ecommerce and web developer finishing a <strong>Higher Vocational Training Diploma in Multiplatform Application Development</strong>,
+          with hands-on experience building online stores on WordPress, WooCommerce and PrestaShop, plus PHP
+          development and database work with MySQL/MariaDB. I'll shortly be joining a company that works daily with
+          <strong>PrestaShop, WordPress, PHP and SEO</strong> as part of my professional training — alongside that,
+          I'm taking on freelance web and ecommerce projects now.
+        </p>
+        <p>
+          I am self-sufficient and take full ownership of my work, but I collaborate naturally when the project calls for it.
+          I care about getting things right and pick up new technologies quickly. Open to freelance work or an
+          ecommerce/web development role, in <strong>Spanish or English</strong>.
+        </p>
+      </div>
+
+      <p class="section-label reveal" style="margin-bottom:16px;transition-delay:0.2s;">Tech stack</p>
+      <div class="tech-grid reveal" style="transition-delay:0.3s;">
+        <div class="tech-category">
+          <span class="tech-category-label">Main Language</span>
+          <div class="tech-tags">
+            <span class="lang-item"><img src="php.png" alt="PHP">PHP</span>
+          </div>
+        </div>
+        <div class="tech-category">
+          <span class="tech-category-label">Databases</span>
+          <div class="tech-tags tech-tags-col">
+            <span class="stack-tag">MariaDB</span>
+            <span class="stack-tag">MySQL</span>
+            <span class="stack-tag">PostgreSQL</span>
+            <span class="stack-tag">SQL</span>
+          </div>
+        </div>
+        <div class="tech-category">
+          <span class="tech-category-label">Frameworks & Libraries</span>
+          <div class="tech-tags">
+            <span class="stack-tag">Composer</span>
+            <span class="stack-tag">Schema.org / JSON-LD</span>
+            <span class="stack-tag">XML / XMLWriter</span>
+          </div>
+        </div>
+        <div class="tech-category">
+          <span class="tech-category-label">CMS & Ecommerce</span>
+          <div class="tech-tags">
+            <span class="stack-tag">Elementor</span>
+            <span class="stack-tag">PrestaShop</span>
+            <span class="stack-tag">WooCommerce</span>
+            <span class="stack-tag">WordPress</span>
+          </div>
+        </div>
+        <div class="tech-category tech-category-tools">
+          <span class="tech-category-label">Tools & DevOps</span>
+          <div class="tech-tags">
+            <span class="stack-tag">Docker</span>
+            <span class="stack-tag">Docker Compose</span>
+            <span class="stack-tag">Git</span>
+            <span class="stack-tag">GitHub</span>
+            <span class="stack-tag">Lighthouse</span>
+            <span class="stack-tag">Local</span>
+            <span class="stack-tag">WP-CLI</span>
+            <span class="stack-tag">XAMPP</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section id="services" class="section-services">
       <hr class="section-divider">
@@ -831,6 +889,7 @@ body::before {
             </div>
             <div class="preview-stack">
               <span class="stack-tag">PrestaShop</span>
+              <span class="stack-tag">WordPress</span>
               <span class="stack-tag">WooCommerce</span>
               <span class="stack-tag">PHP</span>
               <span class="stack-tag">Docker</span>
@@ -860,74 +919,6 @@ body::before {
                 GitHub · WooCommerce
               </a>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section-about">
-      <hr class="section-divider">
-      <h2 class="section-title reveal">About</h2>
-      <div class="about-bio reveal" style="transition-delay:0.1s;">
-        <p>
-          Ecommerce and web developer finishing a <strong>Higher Vocational Training Diploma in Multiplatform Application Development</strong>,
-          with hands-on experience building online stores on WordPress, WooCommerce and PrestaShop, plus PHP
-          development and database work with MySQL/MariaDB. I'll shortly be joining a company that works daily with
-          <strong>PrestaShop, WordPress, PHP and SEO</strong> as part of my professional training — alongside that,
-          I'm taking on freelance web and ecommerce projects now.
-        </p>
-        <p>
-          I am self-sufficient and take full ownership of my work, but I collaborate naturally when the project calls for it.
-          I care about getting things right and pick up new technologies quickly. Open to freelance work or an
-          ecommerce/web development role, in <strong>Spanish or English</strong>.
-        </p>
-      </div>
-
-      <p class="section-label reveal" style="margin-bottom:16px;transition-delay:0.2s;">Tech stack</p>
-      <div class="tech-grid reveal" style="transition-delay:0.3s;">
-        <div class="tech-category">
-          <span class="tech-category-label">Main Language</span>
-          <div class="tech-tags">
-            <span class="lang-item"><img src="php.png" alt="PHP">PHP</span>
-          </div>
-        </div>
-        <div class="tech-category">
-          <span class="tech-category-label">Databases</span>
-          <div class="tech-tags tech-tags-col">
-            <span class="stack-tag">MariaDB</span>
-            <span class="stack-tag">MySQL</span>
-            <span class="stack-tag">PostgreSQL</span>
-            <span class="stack-tag">SQL</span>
-          </div>
-        </div>
-        <div class="tech-category">
-          <span class="tech-category-label">Frameworks & Libraries</span>
-          <div class="tech-tags">
-            <span class="stack-tag">Composer</span>
-            <span class="stack-tag">Schema.org / JSON-LD</span>
-            <span class="stack-tag">XML / XMLWriter</span>
-          </div>
-        </div>
-        <div class="tech-category">
-          <span class="tech-category-label">CMS & Ecommerce</span>
-          <div class="tech-tags">
-            <span class="stack-tag">Elementor</span>
-            <span class="stack-tag">PrestaShop</span>
-            <span class="stack-tag">WooCommerce</span>
-            <span class="stack-tag">WordPress</span>
-          </div>
-        </div>
-        <div class="tech-category tech-category-tools">
-          <span class="tech-category-label">Tools & DevOps</span>
-          <div class="tech-tags">
-            <span class="stack-tag">Docker</span>
-            <span class="stack-tag">Docker Compose</span>
-            <span class="stack-tag">Git</span>
-            <span class="stack-tag">GitHub</span>
-            <span class="stack-tag">Lighthouse</span>
-            <span class="stack-tag">Local</span>
-            <span class="stack-tag">WP-CLI</span>
-            <span class="stack-tag">XAMPP</span>
           </div>
         </div>
       </div>
