@@ -30,7 +30,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--display);
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.7;
   min-height: 100vh;
   overflow-x: hidden;
@@ -90,7 +90,7 @@ body::before {
 }
 .nav-logo {
   font-family: var(--mono);
-  font-size: 13px;
+  font-size: 14px;
   color: var(--coral);
   letter-spacing: 0.04em;
   text-decoration: none;
@@ -108,7 +108,7 @@ body::before {
 .nav-link {
   text-decoration: none;
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   color: var(--text-lo);
   transition: color .2s;
@@ -145,7 +145,7 @@ body::before {
   -webkit-text-stroke: 1.5px rgba(58,123,213,0.75);
 }
 .hero-heading .coral { color: var(--coral); }
-.hero-tagline { font-size: 15px; color: var(--text); line-height: 1.7; max-width: 420px; text-align: justify; }
+.hero-tagline { font-size: 16px; color: var(--text); line-height: 1.7; max-width: 420px; text-align: justify; }
 .hero-tagline strong { color: var(--text-hi); font-weight: 600; }
 .hero-tagline strong.coral { color: var(--coral); }
 .hero-availability {
@@ -154,7 +154,7 @@ body::before {
   gap: 9px;
   width: fit-content;
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.06em;
   color: var(--coral-hi);
   background: var(--coral-lo);
@@ -192,7 +192,7 @@ body::before {
   color: var(--text-hi);
   font-family: var(--display);
   font-weight: 500;
-  font-size: 13px;
+  font-size: 14px;
   padding: 12px 20px;
   border-radius: var(--r-sm);
   text-decoration: none;
@@ -213,7 +213,7 @@ body::before {
   text-decoration: none;
   padding: 8px 14px;
   border-radius: var(--r-sm);
-  font-size: 12px;
+  font-size: 13px;
   font-family: var(--mono);
   letter-spacing: 0.04em;
   transition: background .2s, border-color .2s, color .2s;
@@ -225,16 +225,21 @@ body::before {
 .section-divider { border: none; border-top: 1px solid rgba(255,255,255,0.05); margin: 0 0 56px; }
 .section-label {
   font-family: var(--mono);
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.14em;
   color: var(--coral);
   margin-bottom: 8px;
   text-transform: uppercase;
 }
-.section-title { font-size: 28px; font-weight: 700; color: var(--text-hi); letter-spacing: -0.02em; margin-bottom: 8px; }
-.section-sub { font-size: 16px; color: var(--text); margin-bottom: 40px; max-width: 560px; text-align: justify; }
+.section-title { font-size: 29px; font-weight: 700; color: var(--text-hi); letter-spacing: -0.02em; margin-bottom: 8px; }
+.section-sub { font-size: 17px; color: var(--text); margin-bottom: 40px; max-width: 560px; text-align: justify; }
 .section-ecommerce {
   margin-bottom: 80px;
+}
+.section-ecommerce .projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
 }
 .project-card {
   background: var(--glass);
@@ -245,6 +250,9 @@ body::before {
 }
 .project-card:hover { border-color: var(--glass-b-hi); background: var(--glass-hi); }
 .project-card + .project-card { margin-top: 24px; }
+.projects-grid .project-card + .project-card { margin-top: 0; }
+.projects-grid .project-card-inner { grid-template-columns: 1fr; }
+.projects-grid .project-preview { border-right: none; border-bottom: 1px solid var(--glass-b); }
 .project-card-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -302,19 +310,19 @@ body::before {
 .project-meta { display: flex; flex-direction: column; gap: 16px; }
 .project-type {
   font-family: var(--mono);
-  font-size: 12.5px;
+  font-size: 13.5px;
   letter-spacing: 0.12em;
   color: var(--coral);
   text-transform: uppercase;
 }
-.project-name { font-size: 22px; font-weight: 700; color: var(--text-hi); letter-spacing: -0.02em; line-height: 1.2; }
-.project-desc { font-size: 15.5px; color: var(--text); line-height: 1.7; text-align: justify; }
+.project-name { font-size: 23px; font-weight: 700; color: var(--text-hi); letter-spacing: -0.02em; line-height: 1.2; }
+.project-desc { font-size: 16.5px; color: var(--text); line-height: 1.7; text-align: justify; }
 .project-features { display: flex; flex-direction: column; gap: 8px; }
 .feature-row {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 13.5px;
+  font-size: 14.5px;
   color: var(--text);
 }
 .feature-row::before {
@@ -334,7 +342,7 @@ body::before {
   border: 1px solid rgba(58,123,213,0.35);
   color: var(--coral-hi);
   font-family: var(--mono);
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.06em;
   padding: 10px 20px;
   border-radius: var(--r-sm);
@@ -350,7 +358,7 @@ body::before {
   border: 1px solid var(--glass-b);
   color: var(--text-lo);
   font-family: var(--mono);
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.06em;
   padding: 10px 20px;
   border-radius: var(--r-sm);
@@ -370,8 +378,8 @@ body::before {
   align-items: center;
   gap: 14px;
 }
-.contact-title { font-size: 32px; font-weight: 800; color: var(--text-hi); letter-spacing: -0.03em; }
-.contact-sub { font-size: 15.5px; color: var(--text); max-width: 480px; line-height: 1.7; }
+.contact-title { font-size: 33px; font-weight: 800; color: var(--text-hi); letter-spacing: -0.03em; }
+.contact-sub { font-size: 16.5px; color: var(--text); max-width: 480px; line-height: 1.7; }
 .contact-actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 12px; }
 .footer {
   display: flex;
@@ -379,7 +387,7 @@ body::before {
   align-items: center;
   padding: 28px 48px;
   border-top: 1px solid rgba(255,255,255,0.05);
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text-lo);
   font-family: var(--mono);
   position: relative;
@@ -429,6 +437,7 @@ body::before {
   .tech-category { min-width: 0; }
   .project-card-inner { grid-template-columns: 1fr; }
   .project-preview { border-right: none; border-bottom: 1px solid var(--glass-b); }
+  .section-ecommerce .projects-grid { grid-template-columns: 1fr; }
   .wip-card { flex-direction: column; gap: 20px; padding: 28px; }
   .footer { padding: 24px; flex-direction: column; gap: 12px; text-align: center; }
   .contact-card { padding: 36px 24px; }
@@ -448,7 +457,7 @@ body::before {
   margin-bottom: 48px;
 }
 .about-bio p {
-  font-size: 16px;
+  font-size: 17px;
   color: var(--text);
   line-height: 1.85;
   text-align: justify;
@@ -481,7 +490,7 @@ body::before {
 /* ── Single accent colour across all categories for visual consistency ── */
 .tech-category-label {
   font-family: var(--mono);
-  font-size: 12.5px;
+  font-size: 13.5px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--coral);
@@ -490,7 +499,7 @@ body::before {
 .tech-tags-col { flex-direction: column; align-items: flex-start; }
 .stack-tag {
   font-family: var(--mono);
-  font-size: 12.5px;
+  font-size: 13.5px;
   letter-spacing: 0.05em;
   color: #7ab4ff;
   background: rgba(58,123,213,0.10);
@@ -504,7 +513,7 @@ body::before {
   align-items: center;
   gap: 8px;
   font-family: var(--mono);
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.08em;
   color: var(--coral-hi);
   background: var(--coral-lo);
@@ -538,8 +547,8 @@ body::before {
 }
 .service-card:hover { border-color: var(--glass-b-hi); background: var(--glass-hi); }
 .service-icon { font-size: 26px; line-height: 1; }
-.service-title { font-size: 15.5px; font-weight: 700; color: var(--text-hi); letter-spacing: -0.01em; }
-.service-desc { font-size: 13.5px; color: var(--text); line-height: 1.6; }
+.service-title { font-size: 16.5px; font-weight: 700; color: var(--text-hi); letter-spacing: -0.01em; }
+.service-desc { font-size: 14.5px; color: var(--text); line-height: 1.6; }
 .process-strip {
   display: flex;
   flex-wrap: wrap;
@@ -566,11 +575,11 @@ body::before {
   border: 1px solid rgba(58,123,213,0.35);
   color: var(--coral-hi);
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   flex-shrink: 0;
 }
-.process-label { font-size: 13px; color: var(--text); font-family: var(--mono); letter-spacing: 0.02em; }
+.process-label { font-size: 14px; color: var(--text); font-family: var(--mono); letter-spacing: 0.02em; }
 @media (max-width: 768px) {
   .services-grid { grid-template-columns: 1fr 1fr; }
   .process-strip { flex-direction: column; }
@@ -811,241 +820,243 @@ body::before {
       <p class="section-label reveal">Ecommerce & CMS</p>
       <h2 class="section-title reveal" style="transition-delay:0.1s;">Online store projects</h2>
       <p class="section-sub reveal" style="transition-delay:0.2s;">Real store builds on WordPress/WooCommerce and PrestaShop, from catalogue to checkout — the same work I'd do for your store.</p>
-      <!-- MYTHIC BOOKS -->
-      <div class="project-card reveal" style="transition-delay:0.3s;">
-        <div class="project-card-inner">
-          <div class="project-preview">
-            <div class="project-screenshot">
-              <img src="mythic-books.png" alt="Mythic Books screenshot">
+      <div class="projects-grid">
+        <!-- MYTHIC BOOKS -->
+        <div class="project-card reveal" style="transition-delay:0.3s;">
+          <div class="project-card-inner">
+            <div class="project-preview">
+              <div class="project-screenshot">
+                <img src="mythic-books.png" alt="Mythic Books screenshot">
+              </div>
+              <div class="preview-stack">
+                <span class="stack-tag">WordPress</span>
+                <span class="stack-tag">WooCommerce</span>
+                <span class="stack-tag">Elementor</span>
+                <span class="stack-tag">PHP</span>
+                <span class="stack-tag">Local</span>
+              </div>
             </div>
-            <div class="preview-stack">
-              <span class="stack-tag">WordPress</span>
-              <span class="stack-tag">WooCommerce</span>
-              <span class="stack-tag">Elementor</span>
-              <span class="stack-tag">PHP</span>
-              <span class="stack-tag">Local</span>
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="project-meta">
-              <span class="project-type">Online store · WordPress</span>
-              <h3 class="project-name">Mythic Books</h3>
-              <p class="project-desc">Book store specialising in medieval fiction, space opera and history. Full implementation from scratch: catalogue, cart, checkout and order management.</p>
-            </div>
-            <div class="project-features">
-              <div class="feature-row">10 products with covers, prices and descriptions</div>
-              <div class="feature-row">Categories with images and genre filtering</div>
-              <div class="feature-row">Cart with real-time item counter</div>
-              <div class="feature-row">Free-shipping threshold set to raise average order value</div>
-              <div class="feature-row">Full checkout flow and order management</div>
-              <div class="feature-row">Custom child theme with own CSS</div>
-            </div>
-            <div class="project-actions">
-              <a href="https://youtu.be/xevh2MCGSX8" target="_blank" rel="noopener" class="btn-demo">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Watch demo
-              </a>
-              <a href="https://github.com/fcomartin94/mythic-books-woocommerce" target="_blank" rel="noopener" class="btn-demo-ghost">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                GitHub
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- BREW & CO. -->
-      <div class="project-card reveal" style="transition-delay:0.15s;">
-        <div class="project-card-inner">
-          <div class="project-preview">
-            <div class="project-screenshot">
-              <img src="brew-co.png" alt="Brew &amp; Co. screenshot">
-            </div>
-            <div class="preview-stack">
-              <span class="stack-tag">PrestaShop</span>
-              <span class="stack-tag">PHP</span>
-              <span class="stack-tag">MySQL</span>
-              <span class="stack-tag">XAMPP</span>
-              <span class="stack-tag">Docker</span>
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="project-meta">
-              <span class="project-type">Online store · PrestaShop</span>
-              <h3 class="project-name">Brew & Co.</h3>
-              <p class="project-desc">Specialty coffee store built on PrestaShop 8. Catalogue of single origins, blends and equipment. Includes resolution of PHP and MySQL version conflicts in a local development environment.</p>
-            </div>
-            <div class="project-features">
-              <div class="feature-row">10 products across 3 categories: Single Origin, Blends, Equipment</div>
-              <div class="feature-row">Homepage with image slider and featured products</div>
-              <div class="feature-row">Carrier configured with flat rate (€4.99)</div>
-              <div class="feature-row">Automatic free shipping above €30</div>
-              <div class="feature-row">Database migration between MySQL versions</div>
-              <div class="feature-row">Startup script for local development environment</div>
-            </div>
-            <div class="project-actions">
-              <a href="https://youtu.be/_N138kK4SGU" target="_blank" rel="noopener" class="btn-demo">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Watch demo
-              </a>
-              <a href="https://github.com/fcomartin94/brew-co-prestashop" target="_blank" rel="noopener" class="btn-demo-ghost">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                GitHub
-              </a>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-type">Online store · WordPress</span>
+                <h3 class="project-name">Mythic Books</h3>
+                <p class="project-desc">Book store specialising in medieval fiction, space opera and history. Full implementation from scratch: catalogue, cart, checkout and order management.</p>
+              </div>
+              <div class="project-features">
+                <div class="feature-row">10 products with covers, prices and descriptions</div>
+                <div class="feature-row">Categories with images and genre filtering</div>
+                <div class="feature-row">Cart with real-time item counter</div>
+                <div class="feature-row">Free-shipping threshold set to raise average order value</div>
+                <div class="feature-row">Full checkout flow and order management</div>
+                <div class="feature-row">Custom child theme with own CSS</div>
+              </div>
+              <div class="project-actions">
+                <a href="https://youtu.be/xevh2MCGSX8" target="_blank" rel="noopener" class="btn-demo">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Watch demo
+                </a>
+                <a href="https://github.com/fcomartin94/mythic-books-woocommerce" target="_blank" rel="noopener" class="btn-demo-ghost">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                  GitHub
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- VOLT & CIRCUIT -->
-      <div class="project-card reveal" style="transition-delay:0.45s;">
-        <div class="project-card-inner">
-          <div class="project-preview">
-            <div class="project-screenshot">
-              <img src="volt-circuit.png" alt="Volt & Circuit screenshot">
+        <!-- BREW & CO. -->
+        <div class="project-card reveal" style="transition-delay:0.35s;">
+          <div class="project-card-inner">
+            <div class="project-preview">
+              <div class="project-screenshot">
+                <img src="brew-co.png" alt="Brew &amp; Co. screenshot">
+              </div>
+              <div class="preview-stack">
+                <span class="stack-tag">PrestaShop</span>
+                <span class="stack-tag">PHP</span>
+                <span class="stack-tag">MySQL</span>
+                <span class="stack-tag">XAMPP</span>
+                <span class="stack-tag">Docker</span>
+              </div>
             </div>
-            <div class="preview-stack">
-              <span class="stack-tag">PrestaShop</span>
-              <span class="stack-tag">Docker</span>
-              <span class="stack-tag">Technical SEO</span>
-              <span class="stack-tag">Lighthouse</span>
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="project-meta">
-              <span class="project-type">Technical SEO audit · PrestaShop</span>
-              <h3 class="project-name">Volt & Circuit</h3>
-              <p class="project-desc">Tech-accessories store built on PrestaShop 8 (Docker) as a documented technical SEO case study: common issues seeded on purpose, audited with real tools, then fixed with measurable before/after results.</p>
-            </div>
-            <div class="project-features">
-              <div class="feature-row">13 products across 4 categories, 26 attribute combinations</div>
-              <div class="feature-row">Full local stack on Docker Compose (PrestaShop + MySQL)</div>
-              <div class="feature-row">Audit findings: missing meta tags, no XML sitemap, missing image alt text, robots.txt gaps</div>
-              <div class="feature-row">Fixes verified with Lighthouse: SEO 85 → 92, Performance 67 → 83</div>
-              <div class="feature-row">Bulk catalog seeded via PHP script using PrestaShop's own ORM classes</div>
-              <div class="feature-row">Full step-by-step process documented, including bugs found and fixed</div>
-            </div>
-            <div class="project-actions">
-              <a href="https://youtu.be/46dCulNnAhI" target="_blank" rel="noopener" class="btn-demo">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Watch demo
-              </a>
-              <a href="https://github.com/fcomartin94/volt-circuit-prestashop-seo" target="_blank" rel="noopener" class="btn-demo-ghost">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                GitHub
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- FEED EXPORT FOR GOOGLE SHOPPING - PRESTASHOP + WOOCOMMERCE -->
-      <div class="project-card reveal" style="transition-delay:0.5s;">
-        <div class="project-card-inner">
-          <div class="project-preview">
-            <div class="project-screenshot">
-              <img src="feedgoogleshopping-prestashop.png" alt="Feed Export for Google Shopping screenshot">
-            </div>
-            <div class="preview-stack">
-              <span class="stack-tag">PrestaShop</span>
-              <span class="stack-tag">WordPress</span>
-              <span class="stack-tag">WooCommerce</span>
-              <span class="stack-tag">PHP</span>
-              <span class="stack-tag">Docker</span>
-              <span class="stack-tag">Module &amp; plugin dev</span>
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="project-meta">
-              <span class="project-type">Custom module + plugin · PrestaShop &amp; WooCommerce</span>
-              <h3 class="project-name">Feed Export for Google Shopping</h3>
-              <p class="project-desc">The same feature, built twice from scratch on two different platforms: a PrestaShop module and a WooCommerce plugin that each generate a public XML product feed compatible with Google Merchant Center, straight from the store's real stock and pricing. Same problem, solved on each platform's own architecture — not a copy-paste port.</p>
-            </div>
-            <div class="project-features">
-              <div class="feature-row">One feed item per sellable variant, matching Google's expected format on both platforms</div>
-              <div class="feature-row">Real-time stock and tax-included pricing read via each platform's own product classes, not raw SQL</div>
-              <div class="feature-row">PrestaShop: fixed a real bug — variant URLs using unreachable "#fragment" links</div>
-              <div class="feature-row">WooCommerce: diagnosed and fixed a 404 caused by default "Plain" WordPress permalinks</div>
-              <div class="feature-row">Tested end-to-end against real catalogs (Volt & Circuit / a WooCommerce test store)</div>
-            </div>
-            <div class="project-actions">
-              <a href="https://github.com/fcomartin94/feedgoogleshopping-prestashop" target="_blank" rel="noopener" class="btn-demo-ghost">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                GitHub · PrestaShop
-              </a>
-              <a href="https://github.com/fcomartin94/feedgoogleshopping-woocommerce" target="_blank" rel="noopener" class="btn-demo-ghost">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                GitHub · WooCommerce
-              </a>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-type">Online store · PrestaShop</span>
+                <h3 class="project-name">Brew & Co.</h3>
+                <p class="project-desc">Specialty coffee store built on PrestaShop 8. Catalogue of single origins, blends and equipment. Includes resolution of PHP and MySQL version conflicts in a local development environment.</p>
+              </div>
+              <div class="project-features">
+                <div class="feature-row">10 products across 3 categories: Single Origin, Blends, Equipment</div>
+                <div class="feature-row">Homepage with image slider and featured products</div>
+                <div class="feature-row">Carrier configured with flat rate (€4.99)</div>
+                <div class="feature-row">Automatic free shipping above €30</div>
+                <div class="feature-row">Database migration between MySQL versions</div>
+                <div class="feature-row">Startup script for local development environment</div>
+              </div>
+              <div class="project-actions">
+                <a href="https://youtu.be/_N138kK4SGU" target="_blank" rel="noopener" class="btn-demo">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Watch demo
+                </a>
+                <a href="https://github.com/fcomartin94/brew-co-prestashop" target="_blank" rel="noopener" class="btn-demo-ghost">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                  GitHub
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- LARAVEL PRODUCT CATALOG -->
-      <div class="project-card reveal" style="transition-delay:0.55s;">
-        <div class="project-card-inner">
-          <div class="project-preview">
-            <div class="project-screenshot">
-              <img src="laravel-product-catalog.png" alt="Laravel Product Catalog screenshot">
+        <!-- VOLT & CIRCUIT -->
+        <div class="project-card reveal" style="transition-delay:0.4s;">
+          <div class="project-card-inner">
+            <div class="project-preview">
+              <div class="project-screenshot">
+                <img src="volt-circuit.png" alt="Volt & Circuit screenshot">
+              </div>
+              <div class="preview-stack">
+                <span class="stack-tag">PrestaShop</span>
+                <span class="stack-tag">Docker</span>
+                <span class="stack-tag">Technical SEO</span>
+                <span class="stack-tag">Lighthouse</span>
+              </div>
             </div>
-            <div class="preview-stack">
-              <span class="stack-tag">Laravel</span>
-              <span class="stack-tag">Eloquent</span>
-              <span class="stack-tag">Blade</span>
-              <span class="stack-tag">Sanctum</span>
-              <span class="stack-tag">PHPUnit</span>
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="project-meta">
-              <span class="project-type">Technical training project · Laravel</span>
-              <h3 class="project-name">Laravel Product Catalog</h3>
-              <p class="project-desc">A self-directed Laravel project built to prepare for a Symfony/PrestaShop 8 environment: a product catalog with Eloquent relationships, session and token authentication, and automated tests. Not a client project — a technical exercise, documented as such.</p>
-            </div>
-            <div class="project-features">
-              <div class="feature-row">Product/category/attribute domain with Eloquent relationships, including a many-to-many pivot</div>
-              <div class="feature-row">Full CRUD with Form Request validation and route protection via middleware</div>
-              <div class="feature-row">REST API with public reads and Sanctum token-protected writes</div>
-              <div class="feature-row">Feature test suite covering the CRUD and access-control flow</div>
-            </div>
-            <div class="project-actions">
-              <a href="https://github.com/fcomartin94/laravel-catalog-crud" target="_blank" rel="noopener" class="btn-demo-ghost">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                GitHub
-              </a>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-type">Technical SEO audit · PrestaShop</span>
+                <h3 class="project-name">Volt & Circuit</h3>
+                <p class="project-desc">Tech-accessories store built on PrestaShop 8 (Docker) as a documented technical SEO case study: common issues seeded on purpose, audited with real tools, then fixed with measurable before/after results.</p>
+              </div>
+              <div class="project-features">
+                <div class="feature-row">13 products across 4 categories, 26 attribute combinations</div>
+                <div class="feature-row">Full local stack on Docker Compose (PrestaShop + MySQL)</div>
+                <div class="feature-row">Audit findings: missing meta tags, no XML sitemap, missing image alt text, robots.txt gaps</div>
+                <div class="feature-row">Fixes verified with Lighthouse: SEO 85 → 92, Performance 67 → 83</div>
+                <div class="feature-row">Bulk catalog seeded via PHP script using PrestaShop's own ORM classes</div>
+                <div class="feature-row">Full step-by-step process documented, including bugs found and fixed</div>
+              </div>
+              <div class="project-actions">
+                <a href="https://youtu.be/46dCulNnAhI" target="_blank" rel="noopener" class="btn-demo">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Watch demo
+                </a>
+                <a href="https://github.com/fcomartin94/volt-circuit-prestashop-seo" target="_blank" rel="noopener" class="btn-demo-ghost">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                  GitHub
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- SYMFONY PRODUCT CATALOG -->
-      <div class="project-card reveal" style="transition-delay:0.6s;">
-        <div class="project-card-inner">
-          <div class="project-preview">
-            <div class="project-screenshot">
-              <img src="symfony-product-catalog.png" alt="Symfony Product Catalog screenshot">
+        <!-- FEED EXPORT FOR GOOGLE SHOPPING - PRESTASHOP + WOOCOMMERCE -->
+        <div class="project-card reveal" style="transition-delay:0.45s;">
+          <div class="project-card-inner">
+            <div class="project-preview">
+              <div class="project-screenshot">
+                <img src="feedgoogleshopping-prestashop.png" alt="Feed Export for Google Shopping screenshot">
+              </div>
+              <div class="preview-stack">
+                <span class="stack-tag">PrestaShop</span>
+                <span class="stack-tag">WordPress</span>
+                <span class="stack-tag">WooCommerce</span>
+                <span class="stack-tag">PHP</span>
+                <span class="stack-tag">Docker</span>
+                <span class="stack-tag">Module &amp; plugin dev</span>
+              </div>
             </div>
-            <div class="preview-stack">
-              <span class="stack-tag">Symfony</span>
-              <span class="stack-tag">Doctrine ORM</span>
-              <span class="stack-tag">Twig</span>
-              <span class="stack-tag">PostgreSQL</span>
-              <span class="stack-tag">PHPUnit</span>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-type">Custom module + plugin · PrestaShop &amp; WooCommerce</span>
+                <h3 class="project-name">Feed Export for Google Shopping</h3>
+                <p class="project-desc">The same feature, built twice from scratch on two different platforms: a PrestaShop module and a WooCommerce plugin that each generate a public XML product feed compatible with Google Merchant Center, straight from the store's real stock and pricing. Same problem, solved on each platform's own architecture — not a copy-paste port.</p>
+              </div>
+              <div class="project-features">
+                <div class="feature-row">One feed item per sellable variant, matching Google's expected format on both platforms</div>
+                <div class="feature-row">Real-time stock and tax-included pricing read via each platform's own product classes, not raw SQL</div>
+                <div class="feature-row">PrestaShop: fixed a real bug — variant URLs using unreachable "#fragment" links</div>
+                <div class="feature-row">WooCommerce: diagnosed and fixed a 404 caused by default "Plain" WordPress permalinks</div>
+                <div class="feature-row">Tested end-to-end against real catalogs (Volt & Circuit / a WooCommerce test store)</div>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/fcomartin94/feedgoogleshopping-prestashop" target="_blank" rel="noopener" class="btn-demo-ghost">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                  GitHub · PrestaShop
+                </a>
+                <a href="https://github.com/fcomartin94/feedgoogleshopping-woocommerce" target="_blank" rel="noopener" class="btn-demo-ghost">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                  GitHub · WooCommerce
+                </a>
+              </div>
             </div>
           </div>
-          <div class="project-info">
-            <div class="project-meta">
-              <span class="project-type">Technical training project · Symfony</span>
-              <h3 class="project-name">Symfony Product Catalog</h3>
-              <p class="project-desc">The same product/category/attribute domain as the Laravel catalog, rebuilt in Symfony to compare both frameworks' approach to routing, ORM and dependency injection side by side — built to prepare for PrestaShop 8's Symfony-based backoffice. Not a client project — a technical exercise, documented as such.</p>
+        </div>
+        <!-- LARAVEL PRODUCT CATALOG -->
+        <div class="project-card reveal" style="transition-delay:0.5s;">
+          <div class="project-card-inner">
+            <div class="project-preview">
+              <div class="project-screenshot">
+                <img src="laravel-product-catalog.png" alt="Laravel Product Catalog screenshot">
+              </div>
+              <div class="preview-stack">
+                <span class="stack-tag">Laravel</span>
+                <span class="stack-tag">Eloquent</span>
+                <span class="stack-tag">Blade</span>
+                <span class="stack-tag">Sanctum</span>
+                <span class="stack-tag">PHPUnit</span>
+              </div>
             </div>
-            <div class="project-features">
-              <div class="feature-row">Doctrine ORM entities (Data Mapper pattern) with a many-to-many relationship via a pivot table</div>
-              <div class="feature-row">Attribute-based routing (#[Route]) and Twig views, with an autowired domain service</div>
-              <div class="feature-row">Dockerized PostgreSQL, with database-diffed migrations and fixtures for seed data</div>
-              <div class="feature-row">Functional test suite covering the catalog and 404 handling</div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-type">Technical training project · Laravel</span>
+                <h3 class="project-name">Laravel Product Catalog</h3>
+                <p class="project-desc">A self-directed Laravel project built to prepare for a Symfony/PrestaShop 8 environment: a product catalog with Eloquent relationships, session and token authentication, and automated tests. Not a client project — a technical exercise, documented as such.</p>
+              </div>
+              <div class="project-features">
+                <div class="feature-row">Product/category/attribute domain with Eloquent relationships, including a many-to-many pivot</div>
+                <div class="feature-row">Full CRUD with Form Request validation and route protection via middleware</div>
+                <div class="feature-row">REST API with public reads and Sanctum token-protected writes</div>
+                <div class="feature-row">Feature test suite covering the CRUD and access-control flow</div>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/fcomartin94/laravel-catalog-crud" target="_blank" rel="noopener" class="btn-demo-ghost">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                  GitHub
+                </a>
+              </div>
             </div>
-            <div class="project-actions">
-              <a href="https://github.com/fcomartin94/symfony-catalog" target="_blank" rel="noopener" class="btn-demo-ghost">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                GitHub
-              </a>
+          </div>
+        </div>
+        <!-- SYMFONY PRODUCT CATALOG -->
+        <div class="project-card reveal" style="transition-delay:0.55s;">
+          <div class="project-card-inner">
+            <div class="project-preview">
+              <div class="project-screenshot">
+                <img src="symfony-product-catalog.png" alt="Symfony Product Catalog screenshot">
+              </div>
+              <div class="preview-stack">
+                <span class="stack-tag">Symfony</span>
+                <span class="stack-tag">Doctrine ORM</span>
+                <span class="stack-tag">Twig</span>
+                <span class="stack-tag">PostgreSQL</span>
+                <span class="stack-tag">PHPUnit</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-type">Technical training project · Symfony</span>
+                <h3 class="project-name">Symfony Product Catalog</h3>
+                <p class="project-desc">The same product/category/attribute domain as the Laravel catalog, rebuilt in Symfony to compare both frameworks' approach to routing, ORM and dependency injection side by side — built to prepare for PrestaShop 8's Symfony-based backoffice. Not a client project — a technical exercise, documented as such.</p>
+              </div>
+              <div class="project-features">
+                <div class="feature-row">Doctrine ORM entities (Data Mapper pattern) with a many-to-many relationship via a pivot table</div>
+                <div class="feature-row">Attribute-based routing (#[Route]) and Twig views, with an autowired domain service</div>
+                <div class="feature-row">Dockerized PostgreSQL, with database-diffed migrations and fixtures for seed data</div>
+                <div class="feature-row">Functional test suite covering the catalog and 404 handling</div>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/fcomartin94/symfony-catalog" target="_blank" rel="noopener" class="btn-demo-ghost">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                  GitHub
+                </a>
+              </div>
             </div>
           </div>
         </div>
