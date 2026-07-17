@@ -598,6 +598,7 @@ body::before {
       <a href="#services" class="nav-link">Services</a>
       <a href="#client-work" class="nav-link">Client Work</a>
       <a href="#ecommerce" class="nav-link">Ecommerce</a>
+      <a href="#backend" class="nav-link">Backend</a>
       <a href="#contact" class="nav-link">Contact</a>
     </div>
     <div class="nav-contact">
@@ -976,6 +977,52 @@ body::before {
                   GitHub · WooCommerce
                 </a>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="backend" class="section-ecommerce">
+      <hr class="section-divider">
+      <p class="section-label reveal">Backend & APIs</p>
+      <h2 class="section-title reveal" style="transition-delay:0.1s;">Backend engineering</h2>
+      <p class="section-sub reveal" style="transition-delay:0.2s;">Standalone backend work with no CMS underneath — API design, queued jobs, authentication and testing.</p>
+      <!-- STOCK SYNC HUB -->
+      <div class="project-card reveal" style="transition-delay:0.3s;">
+        <div class="project-card-inner">
+          <div class="project-preview">
+            <div class="project-screenshot">
+              <img src="stock-sync-hub-laravel.png" alt="Stock Sync Hub architecture diagram">
+            </div>
+            <div class="preview-stack">
+              <span class="stack-tag">Laravel</span>
+              <span class="stack-tag">PHP</span>
+              <span class="stack-tag">MySQL</span>
+              <span class="stack-tag">Redis</span>
+              <span class="stack-tag">Docker</span>
+              <span class="stack-tag">Sanctum</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-type">REST API · Laravel</span>
+              <h3 class="project-name">Stock Sync Hub</h3>
+              <p class="project-desc">A standalone Laravel API that syncs products, stock and orders between PrestaShop and WooCommerce through a shared connector interface, normalizing both into one data model and exposing it through a token-authenticated REST API. No CMS underneath — built to show backend engineering: API design, queued jobs, webhooks and testing.</p>
+            </div>
+            <div class="project-features">
+              <div class="feature-row">Shared StoreConnectorInterface with PrestaShop and WooCommerce implementations</div>
+              <div class="feature-row">Queued sync job dispatched hourly via the Laravel scheduler, building a stock history over time</div>
+              <div class="feature-row">WooCommerce webhook receiver with HMAC-SHA256 signature verification</div>
+              <div class="feature-row">Sanctum-authenticated endpoints: products, low-stock alerts, stock history, recent orders, manual sync</div>
+              <div class="feature-row">Fully Dockerized (nginx, PHP-FPM, MySQL, Redis)</div>
+              <div class="feature-row">Test suite covering both connectors, the sync job and the webhook, all via Http::fake()</div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/fcomartin94/stock-sync-hub-laravel" target="_blank" rel="noopener" class="btn-demo-ghost">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                GitHub
+              </a>
             </div>
           </div>
         </div>
