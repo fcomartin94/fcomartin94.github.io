@@ -66,7 +66,7 @@
   --coral-lo:   rgba(58,123,213,0.13);
   --text-hi:    #deeaff;
   --text:       rgba(205,222,255,0.74);
-  --text-lo:    rgba(160,195,240,0.32);
+  --text-lo:    rgba(160,195,240,0.65);
   --display:    'Outfit', sans-serif;
   --mono:       'Space Mono', monospace;
   --r-sm: 12px;
@@ -458,6 +458,38 @@ body::before {
   opacity: 1;
   transform: translateY(0);
 }
+/* ── Accessibility ── */
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -60px;
+  z-index: 100;
+  background: var(--coral-hi);
+  color: var(--bg);
+  padding: 10px 16px;
+  border-radius: var(--r-sm);
+  font-family: var(--mono);
+  font-size: 13px;
+  text-decoration: none;
+  transition: top .15s;
+}
+.skip-link:focus { top: 16px; }
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--coral-hi);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+main:focus { outline: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    transition-delay: 0s !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
 @keyframes pulse-dot {
   0%,100% { opacity:1; transform:scale(1); }
   50%      { opacity:.4; transform:scale(.7); }
@@ -635,13 +667,15 @@ body::before {
   .process-strip { flex-direction: column; }
 }
 </style>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
-<div class="orb orb-1"></div>
-<div class="orb orb-2"></div>
-<div class="orb orb-3"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="orb orb-1" aria-hidden="true"></div>
+<div class="orb orb-2" aria-hidden="true"></div>
+<div class="orb orb-3" aria-hidden="true"></div>
 <div class="page" id="top">
-  <nav class="nav">
+  <nav class="nav" aria-label="Main">
     <a href="#top" class="nav-logo">FM.dev</a>
     <div class="nav-links">
       <a href="#about" class="nav-link">About</a>
@@ -660,7 +694,7 @@ body::before {
       </a>
     </div>
   </nav>
-  <div class="shell">
+  <main class="shell" id="main" tabindex="-1">
 
     <div class="hero-card">
       <div class="hero-left">
@@ -1191,7 +1225,7 @@ body::before {
       </div>
     </section>
 
-  </div>
+  </main>
   <footer class="footer">
     <span>© 2026 Francisco Martín Hersog</span>
   </footer>
